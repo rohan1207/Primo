@@ -42,7 +42,7 @@ export default function AccessoriesPage() {
             </h1>
             <p className="mt-5 max-w-md text-[0.95rem] leading-relaxed text-mota-mist sm:mt-6 sm:text-base">
               High quality trims and accessories that complete every uniform with branded
-              excellence — badges, belts, ties and more.
+              excellence, badges, belts, ties and more.
             </p>
             <div className="mt-7 flex flex-wrap items-center gap-3 sm:mt-8">
               <CtaButton to="/contact" variant="accent">
@@ -92,7 +92,7 @@ export default function AccessoriesPage() {
               <span className="text-[#086dbe]">Matters</span>
             </h2>
             <p className="mx-auto mt-4 max-w-lg text-[0.95rem] leading-relaxed text-mota-mist sm:text-base">
-              From badges to belts — premium accessories that elevate your uniform program.
+              From badges to belts, premium accessories that elevate your uniform program.
             </p>
           </div>
 
@@ -146,7 +146,7 @@ export default function AccessoriesPage() {
               transition={{ duration: 0.6, delay: 0.08 }}
               className="max-w-md text-[0.95rem] leading-relaxed text-mota-mist lg:justify-self-end lg:pt-12 lg:text-right"
             >
-              Pair garments with matching trims so every wearer looks consistent — from ID
+              Pair garments with matching trims so every wearer looks consistent, from ID
               badges to embroidered patches.
             </motion.p>
           </div>
@@ -171,7 +171,7 @@ export default function AccessoriesPage() {
               </div>
               <div className="flex flex-col justify-center px-6 pb-7 pt-2 sm:px-8 sm:pb-9 lg:py-8 lg:pl-2 lg:pr-9">
                 <h3 className="mota-title-card text-white">
-                  One program — garments and accessories together
+                  One program, garments and accessories together
                 </h3>
                 <p className="mt-3 text-sm leading-relaxed text-white/65 sm:mt-4">
                   We coordinate trims with your uniform order so branding, colour and
@@ -213,7 +213,7 @@ export default function AccessoriesPage() {
             <span className="text-[#086dbe]">complete your brand</span>
           </>
         }
-        description="Badges, ties, belts, socks and more — sourced and customised to match your uniform program."
+        description="Badges, ties, belts, socks and more, sourced and customised to match your uniform program."
         primaryLabel="Enquire Now"
         primaryTo="/contact"
         secondaryLabel="View Uniforms"

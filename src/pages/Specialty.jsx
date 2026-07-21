@@ -24,7 +24,7 @@ const HIGHLIGHTS = [
   },
   {
     title: "Custom Programs",
-    text: "From aviation crews to event staff — branded specialty kits at scale.",
+    text: "From aviation crews to event staff, branded specialty kits at scale.",
   },
 ];
 
@@ -50,7 +50,7 @@ export default function Specialty() {
               <span className="text-[#086dbe]">Demanding Environments</span>
             </h1>
             <p className="mt-5 max-w-md text-[0.95rem] leading-relaxed text-mota-mist sm:mt-6 sm:text-base">
-              Pharma, chemical, aviation, safety &amp; reflective clothing — precision-built
+              Pharma, chemical, aviation, safety &amp; reflective clothing, precision-built
               for specialised industries from our Baramati facility.
             </p>
             <div className="mt-7 flex flex-wrap items-center gap-3 sm:mt-8">
@@ -146,7 +146,7 @@ export default function Specialty() {
         </div>
       </section>
 
-      {/* Pharma / Food panel — HomeAbout style */}
+      {/* Pharma / Food panel, HomeAbout style */}
       <section className="section-pad relative overflow-hidden bg-mota-cream !pt-4">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(8,109,190,0.07),transparent_50%)]" />
 
@@ -171,7 +171,7 @@ export default function Specialty() {
               transition={{ duration: 0.6, delay: 0.08 }}
               className="max-w-md text-[0.95rem] leading-relaxed text-mota-mist lg:justify-self-end lg:pt-12 lg:text-right"
             >
-              Cleanroom suits, lab coats, bouffant caps, shoe covers and more — manufactured
+              Cleanroom suits, lab coats, bouffant caps, shoe covers and more, manufactured
               to exacting standards for regulated environments.
             </motion.p>
           </div>
@@ -196,7 +196,7 @@ export default function Specialty() {
               </div>
               <div className="flex flex-col justify-center px-6 pb-7 pt-2 sm:px-8 sm:pb-9 lg:py-8 lg:pl-2 lg:pr-9">
                 <h3 className="mota-title-card text-white">
-                  Cleanroom to chemical — covered under one roof
+                  Cleanroom to chemical, covered under one roof
                 </h3>
                 <p className="mt-3 text-sm leading-relaxed text-white/65 sm:mt-4">
                   Specialised garments with controlled finishing for pharma, food and
@@ -261,7 +261,7 @@ export default function Specialty() {
             <span className="text-[#086dbe]">your industry</span>
           </>
         }
-        description="From cleanrooms to construction sites — tell us your environment and we'll deliver the right solution."
+        description="From cleanrooms to construction sites, tell us your environment and we'll deliver the right solution."
         primaryLabel="Discuss Your Needs"
         primaryTo="/contact"
         secondaryLabel="View Infrastructure"

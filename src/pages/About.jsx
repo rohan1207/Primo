@@ -14,7 +14,7 @@ import EnquiryForm from "../components/ui/EnquiryForm";
 import LogoMark from "../components/svg/LogoMark";
 import { aboutContent, fabricBrands } from "../data/content";
 
-/** Soft rounded frame — consistent with home page cards */
+/** Soft rounded frame, consistent with home page cards */
 const imageFrame = "overflow-hidden rounded-[1.5rem] sm:rounded-[1.75rem]";
 
 const FEATURE_CARDS = [
@@ -65,7 +65,7 @@ const FOCUS_AREAS = [
 const TESTIMONIALS = [
   {
     quote:
-      "Consistent quality and on-time delivery across seasonal school orders — exactly what we needed.",
+      "Consistent quality and on-time delivery across seasonal school orders, exactly what we needed.",
     label: "Education Sector",
   },
   {
@@ -80,7 +80,7 @@ const TESTIMONIALS = [
   },
   {
     quote:
-      "Their in-house facility means every batch is consistent — no surprises, just clean, well-finished uniforms.",
+      "Their in-house facility means every batch is consistent, no surprises, just clean, well-finished uniforms.",
     label: "Hospital Administration",
   },
   {
@@ -100,7 +100,7 @@ const TESTIMONIALS = [
   },
   {
     quote:
-      "25 years of experience really shows — quality, communication and pricing were all spot on.",
+      "25 years of experience really shows, quality, communication and pricing were all spot on.",
     label: "Corporate Partner",
   },
 ];
@@ -137,7 +137,7 @@ export default function About() {
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(8,109,190,0.09),transparent_50%)]" />
 
         <div className="container-mota relative grid items-center gap-10 px-5 pb-14 pt-12 sm:gap-12 sm:px-8 sm:pb-16 sm:pt-14 lg:grid-cols-[1.05fr_0.95fr] lg:gap-12 lg:pb-20 lg:pt-16">
-          {/* Left — copy */}
+          {/* Left, copy */}
           <div>
             <motion.p
               initial={{ opacity: 0, y: 12 }}
@@ -182,7 +182,7 @@ export default function About() {
             </motion.div>
           </div>
 
-          {/* Right — horizontal image stack */}
+          {/* Right, horizontal image stack */}
           <motion.div
             initial={{ opacity: 0, x: 28 }}
             animate={{ opacity: 1, x: 0 }}
@@ -331,7 +331,7 @@ export default function About() {
             </div>
             <div className="flex max-w-md flex-col items-start gap-4 lg:items-end lg:text-right">
               <p className="text-[0.95rem] leading-relaxed text-mota-mist">
-                From classrooms to cleanrooms — tailored programs for every industry we
+                From classrooms to cleanrooms, tailored programs for every industry we
                 serve.
               </p>
               <CtaButton to="/uniforms" variant="outline">
@@ -418,7 +418,7 @@ export default function About() {
               <span className="text-[#086dbe]">Program With Us</span>
             </h2>
             <p className="mx-auto mt-4 max-w-lg text-[0.95rem] leading-relaxed text-mota-mist sm:text-base">
-              Share your requirements — our Pune and Baramati teams will get back with a
+              Share your requirements, our Pune and Baramati teams will get back with a
               tailored plan.
             </p>
           </div>
@@ -467,7 +467,7 @@ export default function About() {
           </div>
         </div>
 
-        {/* Continuous marquee — pause on hover / click */}
+        {/* Continuous marquee, pause on hover / click */}
         <div
           className="group relative mt-10 overflow-hidden sm:mt-12"
           onClick={() => setPaused((p) => !p)}
@@ -479,7 +479,7 @@ export default function About() {
               setPaused((p) => !p);
             }
           }}
-          aria-label="Testimonials — click to pause or resume"
+          aria-label="Testimonials, click to pause or resume"
         >
           {/* edge fades */}
           <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-12 bg-gradient-to-r from-mota-cream to-transparent sm:w-24" />

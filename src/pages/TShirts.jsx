@@ -101,7 +101,7 @@ export default function TShirts() {
               <span className="text-[#086dbe]">Deliver</span>
             </h2>
             <p className="mx-auto mt-4 max-w-lg text-[0.95rem] leading-relaxed text-mota-mist sm:text-base">
-              Round neck, polo, dry-fit and more — branded for events, corporates and
+              Round neck, polo, dry-fit and more, branded for events, corporates and
               promotions.
             </p>
           </div>
@@ -167,7 +167,7 @@ export default function TShirts() {
               transition={{ duration: 0.6, delay: 0.08 }}
               className="max-w-md text-[0.95rem] leading-relaxed text-mota-mist lg:justify-self-end lg:pt-12 lg:text-right"
             >
-              Embroidery, printing and finishing under one roof — so your tees ship ready
+              Embroidery, printing and finishing under one roof, so your tees ship ready
               for the event or office rollout.
             </motion.p>
           </div>
@@ -195,7 +195,7 @@ export default function TShirts() {
                   Custom tees for teams, events and brands
                 </h3>
                 <p className="mt-3 text-sm leading-relaxed text-white/65 sm:mt-4">
-                  Tell us the quantity, artwork and timeline — we handle print, embroidery
+                  Tell us the quantity, artwork and timeline, we handle print, embroidery
                   and packing.
                 </p>
                 <CtaButton to="/contact" variant="accent" className="mt-6">
@@ -234,7 +234,7 @@ export default function TShirts() {
             <span className="text-[#086dbe]">team or event</span>
           </>
         }
-        description="In-house embroidery, screen printing and sublimation — fast turnaround for bulk orders."
+        description="In-house embroidery, screen printing and sublimation, fast turnaround for bulk orders."
         primaryLabel="Get a Quote"
         primaryTo="/contact"
         secondaryLabel="Our Clients"

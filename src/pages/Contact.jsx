@@ -28,7 +28,7 @@ export default function Contact() {
               <span className="text-[#086dbe]">Anytime</span>
             </h1>
             <p className="mt-5 max-w-md text-[0.95rem] leading-relaxed text-mota-mist sm:mt-6 sm:text-base">
-              Reach our Pune office or Baramati manufacturing plant — we&apos;re here to
+              Reach our Pune office or Baramati manufacturing plant, we&apos;re here to
               help with design, sampling and bulk delivery.
             </p>
             <div className="mt-7 flex flex-wrap items-center gap-3 sm:mt-8">
@@ -96,7 +96,7 @@ export default function Contact() {
                   <span className="text-[#086dbe]">Touch</span>
                 </h2>
                 <p className="mt-4 max-w-md text-[0.95rem] leading-relaxed text-mota-mist">
-                  Pune headquarters and Baramati manufacturing plant — both ready to assist
+                  Pune headquarters and Baramati manufacturing plant, both ready to assist
                   you.
                 </p>
               </motion.div>

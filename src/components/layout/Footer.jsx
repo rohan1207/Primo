@@ -19,7 +19,7 @@ export default function Footer() {
                 <LogoMark className="h-12 w-auto sm:h-14" />
               </Link>
               <p className="max-w-sm text-sm leading-relaxed text-white/70">
-                Unique and individualized uniform solutions — school, corporate, hospital,
+                Unique and individualized uniform solutions, school, corporate, hospital,
                 industrial & specialty workwear for 25+ years.
               </p>
               <p className="mt-3 text-xs text-white/50">A brand of Mota Garments</p>

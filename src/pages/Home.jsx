@@ -30,7 +30,7 @@ export default function Home() {
             <span className="text-[#086dbe]">delivered on time</span>
           </>
         }
-        description="25+ years of trusted manufacturing. School, corporate, hospital & industrial — all under one roof."
+        description="25+ years of trusted manufacturing. School, corporate, hospital & industrial, all under one roof."
         primaryLabel="Get a Quote"
         primaryTo="/contact"
         secondaryLabel="View Uniforms"

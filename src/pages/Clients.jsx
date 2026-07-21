@@ -115,7 +115,7 @@ export default function Clients() {
               <span className="text-[#086dbe]">Every Sector</span>
             </h2>
             <p className="mx-auto mt-4 max-w-lg text-[0.95rem] leading-relaxed text-mota-mist sm:text-base">
-              From classrooms to cleanrooms — organisations that trust Mota for quality and
+              From classrooms to cleanrooms, organisations that trust Mota for quality and
               reliability.
             </p>
           </div>
@@ -222,7 +222,7 @@ export default function Clients() {
             <span className="text-[#086dbe]">uniform program</span>
           </>
         }
-        description="From schools to corporates — we deliver customised uniforms with superb quality in the given time frame."
+        description="From schools to corporates, we deliver customised uniforms with superb quality in the given time frame."
         primaryLabel="Get in Touch"
         primaryTo="/contact"
         secondaryLabel="View Uniforms"

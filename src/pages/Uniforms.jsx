@@ -41,7 +41,7 @@ export default function Uniforms() {
 
   return (
     <>
-      {/* Hero — home-page language */}
+      {/* Hero, home-page language */}
       <section className="relative overflow-hidden bg-mota-cream pt-[var(--header-height)]">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(8,109,190,0.1),transparent_50%)]" />
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(30,58,95,0.04),transparent_45%)]" />
@@ -58,7 +58,7 @@ export default function Uniforms() {
               <span className="text-[#086dbe]">Uniform Solutions</span>
             </h1>
             <p className="mt-5 max-w-md text-[0.95rem] leading-relaxed text-mota-mist sm:mt-6 sm:text-base">
-              From school campuses to corporate headquarters — every uniform tells your
+              From school campuses to corporate headquarters, every uniform tells your
               story. Designed, produced and delivered from Baramati.
             </p>
             <div className="mt-7 flex flex-wrap items-center gap-3 sm:mt-8">
@@ -97,7 +97,7 @@ export default function Uniforms() {
         </div>
       </section>
 
-      {/* Categories — DomainSplit-style panels */}
+      {/* Categories, DomainSplit-style panels */}
       <section className="section-pad relative overflow-hidden bg-mota-cream !pt-8 sm:!pt-10">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(8,109,190,0.08),transparent_55%)]" />
 
@@ -155,7 +155,7 @@ export default function Uniforms() {
         </div>
       </section>
 
-      {/* Why Mota — HomeAbout-inspired */}
+      {/* Why Mota, HomeAbout-inspired */}
       <section className="section-pad relative overflow-hidden bg-mota-cream !pt-4">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(8,109,190,0.07),transparent_50%)]" />
 
@@ -180,7 +180,7 @@ export default function Uniforms() {
               transition={{ duration: 0.6, delay: 0.08, ease: [0.22, 1, 0.36, 1] }}
               className="max-w-md text-[0.95rem] leading-relaxed text-mota-mist lg:justify-self-end lg:pt-12 lg:text-right"
             >
-              Design, sampling, production, embroidery, and delivery — all managed in-house
+              Design, sampling, production, embroidery, and delivery, all managed in-house
               at our Baramati facility.
             </motion.p>
           </div>
@@ -208,7 +208,7 @@ export default function Uniforms() {
                   From sketch to shipment, under one roof
                 </h3>
                 <p className="mt-3 text-sm leading-relaxed text-white/65 sm:mt-4">
-                  In-house design, embroidery, washing and finishing — so every order stays
+                  In-house design, embroidery, washing and finishing, so every order stays
                   consistent and on schedule.
                 </p>
                 <CtaButton to="/infrastructure" variant="accent" className="mt-6">
