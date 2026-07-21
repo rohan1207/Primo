@@ -30,7 +30,7 @@ export default function DomainSplit() {
             <span className="text-[#086dbe]">Corporate</span> Uniforms
           </h2>
           <p className="mx-auto mt-4 max-w-lg text-[0.95rem] leading-relaxed text-mota-mist sm:text-base">
-            Whether dressing the next generation or your professional workforce — Mota
+            Whether dressing the next generation or your professional workforce, Mota
             delivers tailored excellence across both worlds.
           </p>
         </motion.div>

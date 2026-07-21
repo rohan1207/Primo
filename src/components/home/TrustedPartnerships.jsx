@@ -45,7 +45,7 @@ export default function TrustedPartnerships() {
             <span className="text-[#086dbe]">Trust Mota</span>
           </h2>
           <p className="mx-auto mt-4 max-w-lg text-[0.95rem] leading-relaxed text-mota-mist sm:text-base">
-            From automotive giants to pharma leaders and institutions — our clients orbit
+            From automotive giants to pharma leaders and institutions, our clients orbit
             around quality, consistency, and on-time delivery.
           </p>
         </div>

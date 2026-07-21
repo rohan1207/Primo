@@ -15,7 +15,7 @@ export const domains = [
     title: "School Uniforms",
     subtitle: "Identity woven into every thread",
     description:
-      "A uniform offers your school public identity embraced by your community and enhances the personal pride of each student — from daily wear to sports kits.",
+      "A uniform offers your school public identity embraced by your community and enhances the personal pride of each student, from daily wear to sports kits.",
     color: "from-blue-50 to-slate-100",
     accent: "#1e3a5f",
     icon: "school",
@@ -53,7 +53,7 @@ export const products = [
     title: "School Uniforms",
     slug: "school",
     description:
-      "Identity, pride, and community — crafted for educational institutions of every scale.",
+      "Identity, pride, and community, crafted for educational institutions of every scale.",
     gradient: "from-blue-100 to-slate-50",
     image: "/school_uniform.jpg",
   },
@@ -77,7 +77,7 @@ export const products = [
     title: "Corporate Uniforms",
     slug: "corporate",
     description:
-      "End-to-end service from design to delivery — managing supply and wearer coordination.",
+      "End-to-end service from design to delivery, managing supply and wearer coordination.",
     gradient: "from-slate-100 to-stone-50",
     image: "/corporate_uniforms.webp",
   },
@@ -93,7 +93,7 @@ export const products = [
     title: "Security Uniforms",
     slug: "security",
     description:
-      "Authority and pride in every stitch — designed to elevate brand value for wearers.",
+      "Authority and pride in every stitch, designed to elevate brand value for wearers.",
     gradient: "from-gray-100 to-slate-50",
     image: "/security_uniform.png",
   },
@@ -126,12 +126,12 @@ export const uniformCategories = [
   {
     title: "School Uniforms",
     description:
-      "A uniform offers your school public identity embraced by your community and enhances the personal pride of each student — equally for sports and general uniforms.",
+      "A uniform offers your school public identity embraced by your community and enhances the personal pride of each student, equally for sports and general uniforms.",
   },
   {
     title: "Security Uniforms",
     description:
-      "Our in-house designers study brand guidelines and incorporate design elements. This not only adds to brand value — for the wearer it becomes a matter of pride.",
+      "Our in-house designers study brand guidelines and incorporate design elements. This not only adds to brand value, for the wearer it becomes a matter of pride.",
   },
   {
     title: "Industrial Uniforms",
@@ -146,7 +146,7 @@ export const uniformCategories = [
   {
     title: "Hospitality Uniforms",
     description:
-      "Long-term relationships built on integrity and dedication to excellence — highest-quality products from premium materials at competitive prices.",
+      "Long-term relationships built on integrity and dedication to excellence, highest-quality products from premium materials at competitive prices.",
   },
   {
     title: "Automobile Uniform",
@@ -169,12 +169,12 @@ export const specialtyCategories = [
   {
     title: "Aviation Industry",
     description:
-      "One of the top aviation uniforms manufacturers & suppliers in Maharashtra. Wide range at economic prices — contact us for any aviation uniform queries.",
+      "One of the top aviation uniforms manufacturers & suppliers in Maharashtra. Wide range at economic prices, contact us for any aviation uniform queries.",
   },
   {
     title: "Safety Uniform",
     description:
-      "Patterns that compliment your brand identity. Our designers study guidelines & incorporate elements — adding brand value and wearer pride.",
+      "Patterns that compliment your brand identity. Our designers study guidelines & incorporate elements, adding brand value and wearer pride.",
   },
   {
     title: "Reflective Clothing",
@@ -184,7 +184,7 @@ export const specialtyCategories = [
   {
     title: "Event & Customised",
     description:
-      "Turn events into memorable experiences with custom uniforms — from nostalgic school themes to creative staff costumes and branded seating.",
+      "Turn events into memorable experiences with custom uniforms, from nostalgic school themes to creative staff costumes and branded seating.",
   },
 ];
 
@@ -320,7 +320,7 @@ export const aboutContent = {
 
 export const benefits = [
   "Your convenience is our priority. We at Mota Uniforms are one stop solution for all your uniform related requirements.",
-  "We are capable of offering you uniform related services under one roof. Right from Designing the uniform to stitching, embroidery, printing, garment washing, finishing and packing — all activities are integrated in our own manufacturing unit.",
+  "We are capable of offering you uniform related services under one roof. Right from Designing the uniform to stitching, embroidery, printing, garment washing, finishing and packing, all activities are integrated in our own manufacturing unit.",
   "Our uniforms are well made using branded trims and accessories. Our uniforms are equipped with Company Logo and individual name badges to help our clients promote their brand identity.",
   "We are committed to provide quality products to our customers, thus converting our association with them into long lasting and enriching partnerships.",
   "Our dedicated team of management and employees are constantly striving hard to adhere to the quality standards so that we can offer our clients nothing but the best.",

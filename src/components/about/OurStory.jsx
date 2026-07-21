@@ -29,7 +29,7 @@ const STORY_DESKTOP = [
     id: "fabrics",
     title: "Fabric Partners",
     year: "Premium",
-    text: "Authorised distributors and stockists of Raymond, Mafatlal, Valji's, Siyaram's, Gwalior Mills and more — quality cloth behind every stitch.",
+    text: "Authorised distributors and stockists of Raymond, Mafatlal, Valji's, Siyaram's, Gwalior Mills and more, quality cloth behind every stitch.",
     containerClass:
       "absolute right-[5%] top-[42%] z-20 flex w-[min(21rem,26%)] flex-col items-end gap-3",
     noteClass: "rotate-3 text-right font-display text-2xl font-semibold text-mota-blue lg:text-3xl",
@@ -38,7 +38,7 @@ const STORY_DESKTOP = [
     id: "growth",
     title: "Every Sector",
     year: "Growth",
-    text: "From classrooms to cleanrooms, boardrooms to factory floors — one integrated team handles design, production, embroidery and delivery.",
+    text: "From classrooms to cleanrooms, boardrooms to factory floors, one integrated team handles design, production, embroidery and delivery.",
     containerClass:
       "absolute left-[6%] top-[60%] z-20 flex w-[min(21rem,26%)] flex-col items-start gap-3",
     noteClass: "-rotate-3 text-left font-display text-2xl font-semibold text-mota-blue lg:text-3xl",
@@ -47,7 +47,7 @@ const STORY_DESKTOP = [
     id: "today",
     title: "Today",
     year: "Now",
-    text: "Our fabric partnerships and manufacturing setup put us in an excellent position to deliver every uniform type — superb quality, on time.",
+    text: "Our fabric partnerships and manufacturing setup put us in an excellent position to deliver every uniform type, superb quality, on time.",
     // Keep on opposite side from Growth so bottom cards don't overlap
     containerClass:
       "absolute right-[5%] top-[78%] z-20 flex w-[min(21rem,26%)] flex-col items-end gap-3",
@@ -343,7 +343,7 @@ export default function OurStory() {
               How Mota Uniforms Became a Trusted Name
             </h2>
             <p className="mota-body mt-4 max-w-xl text-base">
-              Scroll through our journey — from decades of craftsmanship to a full-scale
+              Scroll through our journey, from decades of craftsmanship to a full-scale
               Baramati facility serving every uniform need.
             </p>
           </div>
@@ -415,7 +415,7 @@ export default function OurStory() {
             How Mota Uniforms Began
           </h2>
           <p className="mota-body mx-auto mt-4 max-w-md">
-            From decades of trust to a full-scale manufacturing plant — scroll through our story.
+            From decades of trust to a full-scale manufacturing plant, scroll through our story.
           </p>
         </div>
 

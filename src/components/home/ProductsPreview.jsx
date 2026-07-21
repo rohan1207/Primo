@@ -19,7 +19,7 @@ export default function ProductsPreview() {
                 <span className="text-[#086dbe]">Every Industry</span>
               </>
             }
-            description="From classrooms to boardrooms, hospitals to factory floors — precision-tailored for every sector."
+            description="From classrooms to boardrooms, hospitals to factory floors, precision-tailored for every sector."
           />
           <CtaButton to="/uniforms" variant="outline" className="hidden sm:inline-flex">
             View All

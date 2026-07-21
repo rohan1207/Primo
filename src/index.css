@@ -186,7 +186,7 @@ body {
   box-shadow: 0 8px 32px rgba(26, 43, 60, 0.06);
 }
 
-/* Compact CTAs — sized to label, not oversized */
+/* Compact CTAs, sized to label, not oversized */
 .btn-primary {
   @apply relative inline-flex w-fit items-center justify-center gap-2 overflow-hidden rounded-full py-1.5 pl-4 pr-1.5 text-[13px] font-semibold leading-none text-white transition-all duration-300;
   background-color: #086dbe;

@@ -108,7 +108,7 @@ export default function Infrastructure() {
               transition={{ duration: 0.6, delay: 0.08 }}
               className="max-w-md text-[0.95rem] leading-relaxed text-mota-mist lg:justify-self-end lg:pt-12 lg:text-right"
             >
-              Self-contained production in Baramati — cutting, stitching, embroidery,
+              Self-contained production in Baramati, cutting, stitching, embroidery,
               washing and finishing under one roof.
             </motion.p>
           </div>
@@ -136,7 +136,7 @@ export default function Infrastructure() {
                   From fabric to finished garment in Baramati
                 </h3>
                 <p className="mt-3 text-sm leading-relaxed text-white/65 sm:mt-4">
-                  Strict in-line quality checks keep every consignment consistent —
+                  Strict in-line quality checks keep every consignment consistent,
                   whether school kits or industrial bulk.
                 </p>
                 <CtaButton to="/contact" variant="accent" className="mt-6">
@@ -249,7 +249,7 @@ export default function Infrastructure() {
               <span className="text-[#086dbe]">Equipment</span>
             </h2>
             <p className="mx-auto mt-4 max-w-lg text-[0.95rem] leading-relaxed text-mota-mist sm:text-base">
-              Cutting, stitching, embroidery and finishing — all under one roof.
+              Cutting, stitching, embroidery and finishing, all under one roof.
             </p>
           </div>
 
@@ -282,7 +282,7 @@ export default function Infrastructure() {
             <span className="text-[#086dbe]">manufacturing facility</span>
           </>
         }
-        description="40,000 sqft of integrated production — from fabric to finished garment."
+        description="40,000 sqft of integrated production, from fabric to finished garment."
         primaryLabel="Schedule a Visit"
         primaryTo="/contact"
         secondaryLabel="About Us"

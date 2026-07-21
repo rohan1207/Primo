@@ -46,7 +46,7 @@ export default function Hero() {
           className="hero-bg-image absolute inset-0 h-full w-full object-cover"
           aria-hidden="true"
         />
-        {/* Soft cream wash — keeps contrast close to before */}
+        {/* Soft cream wash, keeps contrast close to before */}
         <div className="absolute inset-0 bg-mota-cream/78" />
         <div className="absolute inset-0 bg-gradient-to-b from-mota-cream/90 via-mota-cream/55 to-mota-cream/85" />
         {/* Center readability halo for title + CTAs */}
@@ -79,7 +79,7 @@ export default function Hero() {
       <div className="container-mota relative z-20 flex min-h-[100svh] flex-col items-center justify-center px-5 pb-20 pt-[calc(var(--header-height)+2rem)] text-center sm:px-8">
         <div className="mx-auto w-full max-w-5xl">
           <p className="hero-line mota-eyebrow mb-6 sm:mb-8">
-            Mota Group — Est. 25+ Years
+            Mota Group, Est. 25+ Years
           </p>
 
           <h1 className="hero-line hero-solid-title font-display font-semibold leading-[0.88] tracking-[-0.03em]">

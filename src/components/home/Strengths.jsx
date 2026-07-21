@@ -28,7 +28,7 @@ export default function Strengths() {
                   <span className="text-[#086dbe]">Crafted for Quality</span>
                 </>
               }
-              description="From design to delivery — every step happens under one roof at our Baramati facility."
+              description="From design to delivery, every step happens under one roof at our Baramati facility."
             />
 
             <div className="mt-10 grid gap-3 sm:grid-cols-2">

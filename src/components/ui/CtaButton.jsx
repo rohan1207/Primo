@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { HiArrowRight } from "react-icons/hi";
 
 /**
- * Compact pill CTA with circle arrow — sized to content, not bulky.
+ * Compact pill CTA with circle arrow, sized to content, not bulky.
  * variants: "accent" | "navy" | "white" | "outline"
  */
 export default function CtaButton({

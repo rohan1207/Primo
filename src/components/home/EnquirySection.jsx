@@ -21,7 +21,7 @@ export default function EnquirySection() {
                     <span className="text-[#086dbe]">Uniforms</span>
                   </>
                 }
-                description="Share your requirements and our team will craft a tailored solution — from design to delivery."
+                description="Share your requirements and our team will craft a tailored solution, from design to delivery."
               />
               <div className="mt-8 space-y-4">
                 <a

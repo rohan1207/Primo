@@ -4,7 +4,7 @@ import CtaButton from "./CtaButton";
 export default function CTABanner({
   eyebrow = "Ready to partner?",
   title = "Let's build your uniform program together",
-  description = "From schools to corporates — we deliver customised uniforms with superb quality in the given time frame.",
+  description = "From schools to corporates, we deliver customised uniforms with superb quality in the given time frame.",
   primaryLabel = "Get in Touch",
   primaryTo = "/contact",
   secondaryLabel = "See Our Clients",

@@ -63,7 +63,7 @@ export default function HomeAbout() {
                 Passion and Precision Drive Our Manufacturing Journey
               </h3>
               <p className="mt-3 text-sm leading-relaxed text-white/65 sm:mt-4 sm:text-[0.95rem]">
-                End-to-end uniforms — design to delivery — with superb quality in the given
+                End-to-end uniforms, design to delivery, with superb quality in the given
                 time frame.
               </p>
               <CtaButton to="/about" variant="accent" className="mt-6 sm:mt-7">

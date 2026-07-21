@@ -30,7 +30,7 @@ function buildCurve(width, height, time, phase, noise, spread) {
     const secondary = Math.sin(x * 0.0028 - travel * 0.55 + phase * 0.7) * (amp * 0.22);
     // Very gentle tertiary for organic feel
     const tertiary = Math.sin(x * 0.0045 + travel * 0.25 + phase) * (amp * 0.08);
-    // Low-frequency noise only — no jagged edges
+    // Low-frequency noise only, no jagged edges
     const organic = noise(x * 0.0012 + phase, time * 0.08 + phase * 0.3) * (amp * 0.1);
 
     points.push({ x, y: baseY + primary + secondary + tertiary + organic });
@@ -136,7 +136,7 @@ function drawSilkDrape(ctx, width, height, time, noise) {
     ctx.fillStyle = grad;
     ctx.fill();
 
-    // Soft valley shadow — follows the smooth curve
+    // Soft valley shadow, follows the smooth curve
     ctx.beginPath();
     traceCurve(ctx, bottom);
     ctx.strokeStyle = lit ? "rgba(80, 110, 155, 0.16)" : "rgba(55, 85, 135, 0.22)";

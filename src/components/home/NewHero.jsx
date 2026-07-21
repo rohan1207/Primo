@@ -159,7 +159,7 @@ export default function NewHero() {
             transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
             className="mt-4 max-w-md text-[0.95rem] leading-relaxed text-mota-mist sm:mt-5 sm:text-base"
           >
-            End-to-end manufacturing from Baramati — design, embroidery, production and
+            End-to-end manufacturing from Baramati, design, embroidery, production and
             delivery for schools, corporates, hospitals and industry across India.
           </motion.p>
 
@@ -198,7 +198,7 @@ export default function NewHero() {
           <HeroSlideshow index={index} />
         </motion.div>
 
-        {/* Desktop slideshow — narrower, flush to navy rail */}
+        {/* Desktop slideshow, narrower, flush to navy rail */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
