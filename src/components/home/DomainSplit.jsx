@@ -1,22 +1,29 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import {
   HiOutlineAcademicCap,
   HiOutlineBriefcase,
+  HiOutlineGift,
+  HiOutlineExternalLink,
 } from "react-icons/hi";
 import { domains } from "../../data/content";
 import CtaButton from "../ui/CtaButton";
+import QuoteModal from "../ui/QuoteModal";
 
 const icons = {
   school: HiOutlineAcademicCap,
   corporate: HiOutlineBriefcase,
+  gifting: HiOutlineGift,
 };
 
 export default function DomainSplit() {
+  const [quoteSubject, setQuoteSubject] = useState(null);
+
   return (
-    <section className="relative flex min-h-[100svh] flex-col overflow-hidden bg-mota-cream">
+    <section className="relative overflow-hidden bg-mota-cream">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(8,109,190,0.07),transparent_55%)]" />
 
-      <div className="container-mota relative z-10 shrink-0 px-5 pb-4 pt-10 sm:px-8 sm:pb-5 sm:pt-12 lg:pt-14">
+      <div className="container-mota relative z-10 px-5 pb-4 pt-10 sm:px-8 sm:pb-5 sm:pt-12 lg:pt-14">
         <motion.div
           initial={{ opacity: 0, y: 18 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -36,9 +43,11 @@ export default function DomainSplit() {
         </motion.div>
       </div>
 
-      <div className="relative z-10 mx-auto grid w-full max-w-7xl flex-1 grid-cols-1 gap-4 px-5 pb-8 sm:gap-5 sm:px-8 sm:pb-10 lg:grid-cols-2 lg:gap-6 lg:pb-12">
+      <div className="relative z-10 mx-auto grid w-full max-w-7xl grid-cols-1 gap-4 px-5 pb-10 sm:gap-5 sm:px-8 sm:pb-12 lg:grid-cols-2 lg:gap-6 lg:pb-16">
         {domains.map((domain, i) => {
           const DomainIcon = icons[domain.icon];
+          const isCentered = i === 2;
+          const label = domain.ctaLabel || domain.cta.replace("Explore ", "");
 
           return (
             <motion.article
@@ -46,8 +55,10 @@ export default function DomainSplit() {
               initial={{ opacity: 0, y: 28 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.25 }}
-              transition={{ delay: i * 0.12, duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
-              className="group relative flex min-h-[420px] overflow-hidden rounded-[1.75rem] sm:min-h-[480px] lg:h-full lg:min-h-0"
+              transition={{ delay: (i % 2) * 0.12, duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
+              className={`group relative flex min-h-[380px] cursor-pointer overflow-hidden rounded-[1.75rem] sm:min-h-[460px] lg:min-h-[520px] ${
+                isCentered ? "lg:col-span-2 lg:mx-auto lg:w-[calc(50%-0.75rem)]" : ""
+              }`}
             >
               <img
                 src={domain.image}
@@ -80,16 +91,43 @@ export default function DomainSplit() {
                   {domain.description}
                 </p>
 
-                <CtaButton to="/uniforms" variant="white" className="mt-5 sm:mt-6">
-                  {domain.cta.replace("Explore ", "")}
+                <CtaButton static variant="white" className="mt-5 sm:mt-6">
+                  <span className="inline-flex items-center gap-1.5">
+                    {label}
+                    {domain.external && <HiOutlineExternalLink className="h-3.5 w-3.5" />}
+                  </span>
                 </CtaButton>
               </div>
 
-              <div className="pointer-events-none absolute inset-0 rounded-[1.75rem] ring-1 ring-inset ring-white/10" />
+              <div className="pointer-events-none absolute inset-0 rounded-[1.75rem] ring-1 ring-inset ring-white/10 transition-colors duration-500 group-hover:ring-white/25" />
+
+              {/* Whole card is the click target */}
+              {domain.external ? (
+                <a
+                  href={domain.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`${domain.title}, opens in a new tab`}
+                  className="absolute inset-0 z-20 rounded-[1.75rem] outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-mota-blue"
+                />
+              ) : (
+                <button
+                  type="button"
+                  onClick={() => setQuoteSubject(domain.title)}
+                  aria-label={`Get a quote for ${domain.title}`}
+                  className="absolute inset-0 z-20 rounded-[1.75rem] outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-mota-blue"
+                />
+              )}
             </motion.article>
           );
         })}
       </div>
+
+      <QuoteModal
+        open={Boolean(quoteSubject)}
+        subject={quoteSubject}
+        onClose={() => setQuoteSubject(null)}
+      />
     </section>
   );
 }

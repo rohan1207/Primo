@@ -39,7 +39,11 @@ export default function Strengths() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.04, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-                  className="flex items-start gap-3 rounded-2xl border border-mota-line bg-white/80 p-4 shadow-soft backdrop-blur-sm transition-all duration-300 hover:border-[#086dbe]/30 hover:bg-white"
+                  className={`flex items-start gap-3 rounded-2xl border border-mota-line bg-white/80 p-4 shadow-soft backdrop-blur-sm transition-all duration-300 hover:border-[#086dbe]/30 hover:bg-white ${
+                    i === strengths.length - 1 && strengths.length % 2 !== 0
+                      ? "sm:col-span-2"
+                      : ""
+                  }`}
                   data-reveal
                 >
                   <HiOutlineCheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-[#086dbe]" />

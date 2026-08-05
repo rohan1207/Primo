@@ -5,6 +5,19 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
+let lenisInstance = null;
+
+/**
+ * Jumps to the top of the document. Lenis tracks its own scroll position, so
+ * a bare window.scrollTo leaves it stale and it scrolls back on the next input.
+ */
+export function scrollToTop() {
+  if (lenisInstance) {
+    lenisInstance.scrollTo(0, { immediate: true, force: true });
+  }
+  window.scrollTo(0, 0);
+}
+
 export function useLenis() {
   useEffect(() => {
     const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -16,17 +29,21 @@ export function useLenis() {
       smoothWheel: true,
       touchMultiplier: 1.5,
     });
+    lenisInstance = lenis;
 
     lenis.on("scroll", ScrollTrigger.update);
 
+    let frame = 0;
     const raf = (time) => {
       lenis.raf(time);
-      requestAnimationFrame(raf);
+      frame = requestAnimationFrame(raf);
     };
-    requestAnimationFrame(raf);
+    frame = requestAnimationFrame(raf);
 
     return () => {
+      cancelAnimationFrame(frame);
       lenis.destroy();
+      lenisInstance = null;
     };
   }, []);
 }

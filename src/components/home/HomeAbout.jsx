@@ -59,7 +59,7 @@ export default function HomeAbout() {
             </div>
 
             <div className="flex flex-col justify-center px-6 pb-7 pt-2 sm:px-8 sm:pb-9 lg:py-8 lg:pl-2 lg:pr-9">
-              <h3 className="mota-title-card text-white">
+              <h3 className="mota-title-card !text-white">
                 Passion and Precision Drive Our Manufacturing Journey
               </h3>
               <p className="mt-3 text-sm leading-relaxed text-white/65 sm:mt-4 sm:text-[0.95rem]">

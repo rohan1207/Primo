@@ -6,7 +6,6 @@ import {
   HiOutlineShieldCheck,
   HiOutlineColorSwatch,
   HiOutlineUsers,
-  HiPlay,
 } from "react-icons/hi";
 import { useScrollReveal } from "../hooks/useAnimations";
 import CtaButton from "../components/ui/CtaButton";
@@ -20,45 +19,27 @@ const imageFrame = "overflow-hidden rounded-[1.5rem] sm:rounded-[1.75rem]";
 const FEATURE_CARDS = [
   {
     icon: HiOutlineCog,
-    title: "Modern Technology",
-    stat: "Brother & Juki",
-    text: "Automated sewing lines with strict in-line quality checks.",
+    title: "Automated Machinery",
+    stat: "800+ / Day",
+    text: "High-end Brother and Juki sewing lines built for bulk output.",
   },
   {
     icon: HiOutlineShieldCheck,
     title: "Quality Consistency",
-    stat: "100%",
-    text: "Inspection checkpoints in-line and post production.",
+    stat: "100% Inspected",
+    text: "Checkpoints in-line and post production on every consignment.",
   },
   {
     icon: HiOutlineColorSwatch,
     title: "Premium Fabrics",
-    stat: "5+",
-    text: "Authorised stockist of Raymond, Mafatlal, Siyaram's & more.",
+    stat: "5+ Mills",
+    text: "Authorised stockist of Raymond, Mafatlal, Siyaram's and more.",
   },
   {
     icon: HiOutlineUsers,
     title: "Skilled Workforce",
-    stat: "90+",
+    stat: "90+ Specialists",
     text: "Dedicated team handling design through bulk delivery.",
-  },
-];
-
-const FOCUS_AREAS = [
-  {
-    title: "School & College",
-    role: "Education Programs",
-    image: "/school_uniform.jpg",
-  },
-  {
-    title: "Corporate Wear",
-    role: "Brand Presence",
-    image: "/corporate_uniforms.webp",
-  },
-  {
-    title: "Industrial & Specialty",
-    role: "Workwear Solutions",
-    image: "/industrial_uniform.jpg",
   },
 ];
 
@@ -176,7 +157,7 @@ export default function About() {
               transition={{ delay: 0.24 }}
               className="mt-7 sm:mt-8"
             >
-              <CtaButton to="/uniforms" variant="accent">
+              <CtaButton href="https://theuniformlab.in/" external variant="accent">
                 Our Uniforms
               </CtaButton>
             </motion.div>
@@ -203,11 +184,6 @@ export default function About() {
                 alt="Mota uniforms craftsmanship"
                 className="aspect-[3/4] w-full object-cover"
               />
-              <div className="absolute inset-0 flex items-center justify-center bg-mota-blue/20">
-                <span className="flex h-12 w-12 items-center justify-center rounded-full bg-white text-[#086dbe] shadow-float sm:h-14 sm:w-14">
-                  <HiPlay className="ml-0.5 h-5 w-5 sm:h-6 sm:w-6" />
-                </span>
-              </div>
             </div>
 
             <div className={`w-[42%] sm:w-[26%] ${imageFrame}`}>
@@ -244,40 +220,46 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
-              className="flex flex-col justify-between rounded-[1.75rem] bg-white p-7 shadow-soft sm:rounded-[2rem] sm:p-9"
+              className="flex flex-col justify-center rounded-[1.75rem] bg-white p-7 shadow-soft sm:rounded-[2rem] sm:p-9"
             >
-              <div>
-                <LogoMark className="h-12 w-auto sm:h-14" />
-                <p className="mt-8 font-sans text-5xl font-bold tracking-tight text-mota-ink sm:text-6xl">
-                  25<span className="text-[#086dbe]">+</span>
-                </p>
-                <p className="mt-2 text-sm font-semibold uppercase tracking-[0.12em] text-mota-mist">
-                  Years of manufacturing trust
-                </p>
-                <p className="mt-4 max-w-sm text-sm leading-relaxed text-mota-mist">
-                  Preferred vendor for schools, hospitals, pharma, aviation, security,
-                  hospitality and corporates across India.
-                </p>
-              </div>
+              <LogoMark onLightBg className="h-12 w-auto sm:h-14" />
 
-              <div className="mt-8 flex items-center gap-3">
-                <div className="flex -space-x-2">
-                  {CLIENT_AVATARS.map((src) => (
-                    <span
-                      key={src}
-                      className="flex h-9 w-9 items-center justify-center overflow-hidden rounded-full border-2 border-white bg-mota-cream"
-                    >
-                      <img src={src} alt="" className="h-6 w-6 object-contain" />
-                    </span>
-                  ))}
+              <p className="mt-6 font-sans text-5xl font-bold tracking-tight text-mota-ink sm:mt-7 sm:text-6xl">
+                40<span className="text-[#086dbe]">+</span>
+              </p>
+              <p className="mt-2 text-sm font-semibold uppercase tracking-[0.12em] text-mota-mist">
+                Years of manufacturing trust
+              </p>
+              <p className="mt-4 max-w-sm text-sm leading-relaxed text-mota-mist">
+                Preferred vendor for schools, hospitals, pharma, aviation, security,
+                hospitality and corporates across India.
+              </p>
+
+              <div className="mt-6 h-px w-full bg-mota-line sm:mt-7" />
+
+              <div className="mt-5 flex flex-wrap items-center gap-x-4 gap-y-3 sm:mt-6">
+                <div className="flex items-center gap-3">
+                  <div className="flex -space-x-2">
+                    {CLIENT_AVATARS.map((src) => (
+                      <span
+                        key={src}
+                        className="flex h-9 w-9 items-center justify-center overflow-hidden rounded-full border-2 border-white bg-mota-cream"
+                      >
+                        <img src={src} alt="" className="h-6 w-6 object-contain" />
+                      </span>
+                    ))}
+                  </div>
+                  <Link
+                    to="/clients"
+                    className="flex h-9 w-9 items-center justify-center rounded-full bg-[#086dbe] text-lg font-semibold text-white transition-colors hover:bg-mota-blue"
+                    aria-label="View all clients"
+                  >
+                    +
+                  </Link>
                 </div>
-                <Link
-                  to="/clients"
-                  className="flex h-9 w-9 items-center justify-center rounded-full bg-[#086dbe] text-lg font-semibold text-white transition-colors hover:bg-mota-blue"
-                  aria-label="View all clients"
-                >
-                  +
-                </Link>
+                <p className="text-sm font-medium text-mota-mist">
+                  Trusted by leading brands
+                </p>
               </div>
             </motion.div>
 
@@ -314,60 +296,6 @@ export default function About() {
             <CtaButton to="/infrastructure" variant="outline">
               Learn More
             </CtaButton>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Focus Areas (team-slot adaptation) ── */}
-      <section className="section-pad relative overflow-hidden bg-mota-cream !pt-4">
-        <div className="container-mota relative">
-          <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
-            <div className="max-w-lg">
-              <span className="mota-eyebrow-pill">Our Focus</span>
-              <h2 className="mota-title-section mt-4">
-                Sectors We{" "}
-                <span className="text-[#086dbe]">Dress With Pride</span>
-              </h2>
-            </div>
-            <div className="flex max-w-md flex-col items-start gap-4 lg:items-end lg:text-right">
-              <p className="text-[0.95rem] leading-relaxed text-mota-mist">
-                From classrooms to cleanrooms, tailored programs for every industry we
-                serve.
-              </p>
-              <CtaButton to="/uniforms" variant="outline">
-                View All Uniforms
-              </CtaButton>
-            </div>
-          </div>
-
-          <div className="mt-10 grid grid-cols-2 gap-x-4 gap-y-6 sm:mt-12 sm:grid-cols-3 sm:gap-6">
-            {FOCUS_AREAS.map((area, i) => (
-              <motion.div
-                key={area.title}
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1, duration: 0.6 }}
-                className={`text-center ${
-                  i === FOCUS_AREAS.length - 1 && FOCUS_AREAS.length % 2 !== 0
-                    ? "col-span-2 sm:col-span-1"
-                    : ""
-                }`}
-              >
-                <div className={`mx-auto max-w-[280px] sm:max-w-none ${imageFrame}`}>
-                  <img
-                    src={area.image}
-                    alt={area.title}
-                    className="aspect-[4/5] w-full object-cover transition-transform duration-700 hover:scale-105"
-                    loading="lazy"
-                  />
-                </div>
-                <h3 className="mt-4 font-sans text-base font-bold text-mota-ink sm:mt-5 sm:text-xl">
-                  {area.title}
-                </h3>
-                <p className="mt-1 text-sm text-mota-mist">{area.role}</p>
-              </motion.div>
-            ))}
           </div>
         </div>
       </section>
@@ -429,12 +357,12 @@ export default function About() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.65 }}
-              className={imageFrame}
+              className={`relative min-h-[300px] sm:min-h-[360px] lg:min-h-0 ${imageFrame}`}
             >
               <img
                 src="/img1.jpeg"
                 alt="Mota manufacturing facility"
-                className="h-full min-h-[320px] w-full object-cover lg:min-h-full"
+                className="absolute inset-0 h-full w-full object-cover"
                 loading="lazy"
               />
             </motion.div>

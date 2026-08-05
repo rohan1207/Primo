@@ -15,6 +15,9 @@ export default function CtaButton({
   onClick,
   fullWidth = false,
   showArrow = true,
+  external = false,
+  /** Render as a plain span, for use inside an already-clickable parent */
+  static: isStatic = false,
 }) {
   const variants = {
     accent:
@@ -57,6 +60,10 @@ export default function CtaButton({
     </>
   );
 
+  if (isStatic) {
+    return <span className={classes}>{content}</span>;
+  }
+
   if (type === "submit" || type === "button") {
     return (
       <button type={type} onClick={onClick} className={classes}>
@@ -67,7 +74,12 @@ export default function CtaButton({
 
   if (href) {
     return (
-      <a href={href} onClick={onClick} className={classes}>
+      <a
+        href={href}
+        onClick={onClick}
+        className={classes}
+        {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+      >
         {content}
       </a>
     );

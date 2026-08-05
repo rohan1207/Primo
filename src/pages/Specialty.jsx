@@ -1,30 +1,56 @@
 import { motion } from "framer-motion";
+import {
+  HiOutlineBeaker,
+  HiOutlineCake,
+  HiOutlineFire,
+  HiOutlinePaperAirplane,
+  HiOutlineHeart,
+  HiOutlineShieldCheck,
+  HiOutlineEye,
+  HiOutlineTruck,
+  HiOutlineCog,
+  HiOutlineSparkles,
+  HiOutlineAcademicCap,
+  HiOutlineOfficeBuilding,
+  HiOutlineCheckCircle,
+  HiOutlineClipboardCheck,
+  HiOutlineAdjustments,
+} from "react-icons/hi";
 import { useScrollReveal } from "../hooks/useAnimations";
 import CtaButton from "../components/ui/CtaButton";
 import CTABanner from "../components/ui/CTABanner";
 import { specialtyCategories, pharmaProducts } from "../data/content";
 
-const SPECIALTY_IMAGES = [
-  "/hospital_uniform.png",
-  "/industrial_uniform.jpg",
-  "/corporate_uniforms.webp",
-  "/security_uniform.png",
-  "/Autombile_Uniform.jpg",
-  "/hotel_uniform.jpg",
-];
+const industryIcons = {
+  pharma: HiOutlineBeaker,
+  food: HiOutlineCake,
+  chemical: HiOutlineFire,
+  aviation: HiOutlinePaperAirplane,
+  healthcare: HiOutlineHeart,
+  security: HiOutlineShieldCheck,
+  reflective: HiOutlineEye,
+  automobile: HiOutlineTruck,
+  manufacturing: HiOutlineCog,
+  hospitality: HiOutlineSparkles,
+  education: HiOutlineAcademicCap,
+  corporate: HiOutlineOfficeBuilding,
+};
 
-const HIGHLIGHTS = [
+const COMPLIANCE = [
   {
+    icon: HiOutlineClipboardCheck,
     title: "Compliance Ready",
-    text: "Apparel engineered for cleanrooms, labs, and high-risk industrial environments.",
+    text: "Garments engineered to suit cleanroom, lab and high-risk site protocols.",
   },
   {
+    icon: HiOutlineShieldCheck,
     title: "Protective Performance",
-    text: "Chemical-resistant, reflective, and safety wear built with durable stitching.",
+    text: "Chemical-resistant and reflective builds with reinforced stitching.",
   },
   {
-    title: "Custom Programs",
-    text: "From aviation crews to event staff, branded specialty kits at scale.",
+    icon: HiOutlineAdjustments,
+    title: "Built to Your Spec",
+    text: "Fabric, fit, closures and branding matched to your safety policy.",
   },
 ];
 
@@ -50,8 +76,8 @@ export default function Specialty() {
               <span className="text-[#086dbe]">Demanding Environments</span>
             </h1>
             <p className="mt-5 max-w-md text-[0.95rem] leading-relaxed text-mota-mist sm:mt-6 sm:text-base">
-              Pharma, chemical, aviation, safety &amp; reflective clothing, precision-built
-              for specialised industries from our Baramati facility.
+              Where a uniform has to do more than look good. Protective, hygienic and
+              compliant apparel, manufactured in-house at our Baramati facility.
             </p>
             <div className="mt-7 flex flex-wrap items-center gap-3 sm:mt-8">
               <CtaButton to="/contact" variant="accent">
@@ -80,8 +106,8 @@ export default function Specialty() {
             </div>
             <div className="absolute -bottom-4 -left-3 hidden overflow-hidden rounded-2xl border border-white/50 shadow-float sm:block sm:-bottom-5 sm:-left-5 sm:w-[42%]">
               <img
-                src="/hospital_uniform.png"
-                alt="Hospital and pharma apparel"
+                src="/security_uniform.png"
+                alt="Security and safety uniforms"
                 className="aspect-[4/3] w-full object-cover"
               />
             </div>
@@ -89,167 +115,154 @@ export default function Specialty() {
         </div>
       </section>
 
-      {/* Specialty categories */}
+      {/* Industries covered */}
       <section className="section-pad relative overflow-hidden bg-mota-cream !pt-8 sm:!pt-10">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(8,109,190,0.08),transparent_55%)]" />
 
         <div className="container-mota relative">
           <div className="mx-auto max-w-2xl text-center">
-            <span className="mota-eyebrow-pill">Specialty Range</span>
+            <span className="mota-eyebrow-pill">Industries We Equip</span>
             <h2 className="mota-title-section mt-4">
-              Built for{" "}
-              <span className="text-[#086dbe]">Safety &amp; Compliance</span>
+              Every Sector,{" "}
+              <span className="text-[#086dbe]">Covered</span>
             </h2>
             <p className="mx-auto mt-4 max-w-lg text-[0.95rem] leading-relaxed text-mota-mist sm:text-base">
-              Industry-specific apparel engineered to meet the strictest workplace standards.
+              Twelve industries, each with its own safety, hygiene and branding
+              requirements, all handled under one roof.
             </p>
           </div>
 
-          <div className="mt-10 grid grid-cols-2 gap-3 sm:mt-12 sm:gap-5 lg:grid-cols-3 lg:gap-6">
-            {specialtyCategories.map((cat, i) => (
-              <motion.article
-                key={cat.title}
-                initial={{ opacity: 0, y: 28 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.2 }}
-                transition={{ delay: (i % 3) * 0.07, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-                className="group relative min-h-[220px] overflow-hidden rounded-2xl sm:min-h-[340px] sm:rounded-[1.75rem]"
-                data-reveal
-              >
-                <img
-                  src={SPECIALTY_IMAGES[i % SPECIALTY_IMAGES.length]}
-                  alt={cat.title}
-                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1.1s] ease-out group-hover:scale-[1.05]"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-mota-blue via-mota-blue/55 to-mota-blue/10" />
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(8,109,190,0.3),transparent_55%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+          <div className="mt-10 grid grid-cols-2 gap-3 sm:mt-12 sm:grid-cols-3 sm:gap-4 lg:grid-cols-4 lg:gap-5">
+            {specialtyCategories.map((cat, i) => {
+              const Icon = industryIcons[cat.icon];
+              return (
+                <motion.article
+                  key={cat.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{ delay: (i % 4) * 0.05, duration: 0.5 }}
+                  className="group relative overflow-hidden rounded-[1.25rem] border border-mota-line bg-white/90 p-4 shadow-soft transition-all duration-300 hover:-translate-y-1 hover:border-[#086dbe]/25 hover:shadow-float sm:rounded-[1.5rem] sm:p-6"
+                  data-reveal
+                >
+                  <div className="pointer-events-none absolute -right-6 -top-6 h-20 w-20 rounded-full bg-[#086dbe]/[0.07] transition-transform duration-500 group-hover:scale-150" />
 
-                <span className="absolute left-4 top-4 font-sans text-3xl font-bold leading-none text-white/25 sm:left-5 sm:top-5 sm:text-5xl">
-                  0{i + 1}
-                </span>
-
-                <div className="absolute inset-x-0 bottom-0 p-4 sm:p-6">
-                  <h3 className="font-sans text-base font-bold tracking-[-0.02em] text-white sm:text-[1.35rem]">
+                  <div className="relative flex h-10 w-10 items-center justify-center rounded-xl bg-[#086dbe]/10 text-[#086dbe] transition-colors duration-300 group-hover:bg-[#086dbe] group-hover:text-white sm:h-11 sm:w-11">
+                    <Icon className="h-5 w-5" />
+                  </div>
+                  <h3 className="relative mt-4 font-sans text-base font-bold tracking-[-0.02em] text-mota-ink sm:text-lg">
                     {cat.title}
                   </h3>
-                  <div className="mt-2.5 h-0.5 w-8 rounded-full bg-[#086dbe] transition-all duration-500 group-hover:w-16 sm:mt-3 sm:w-10" />
-                  <p className="mt-3 hidden line-clamp-3 text-sm leading-relaxed text-white/75 sm:block">
+                  <p className="relative mt-2 text-sm leading-relaxed text-mota-mist">
                     {cat.description}
                   </p>
-                </div>
-
-                <div className="pointer-events-none absolute inset-0 rounded-2xl ring-1 ring-inset ring-white/10 sm:rounded-[1.75rem]" />
-              </motion.article>
-            ))}
+                </motion.article>
+              );
+            })}
           </div>
         </div>
       </section>
 
-      {/* Pharma / Food panel, HomeAbout style */}
+      {/* Product range */}
       <section className="section-pad relative overflow-hidden bg-mota-cream !pt-4">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(8,109,190,0.07),transparent_50%)]" />
 
         <div className="container-mota relative">
-          <div className="grid gap-6 lg:grid-cols-[1.15fr_0.85fr] lg:items-start lg:gap-12">
+          <div className="grid items-stretch gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:gap-10">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 0.65 }}
+              className="relative min-h-[280px] overflow-hidden rounded-[1.5rem] sm:min-h-[340px] sm:rounded-[1.75rem] lg:min-h-0"
             >
-              <span className="mota-eyebrow-pill">Pharma / Food Processing</span>
-              <h2 className="mota-title-section mt-4">
-                Industry-Specific{" "}
-                <span className="text-[#086dbe]">Apparel</span>
-              </h2>
+              <img
+                src="/hospital_uniform.png"
+                alt="Cleanroom and lab apparel manufactured by Mota"
+                className="absolute inset-0 h-full w-full object-cover"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-mota-blue/85 via-mota-blue/20 to-transparent" />
+              <div className="absolute inset-x-0 bottom-0 p-5 sm:p-7">
+                <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-white/70 sm:text-[11px]">
+                  Controlled environments
+                </p>
+                <p className="mt-2 font-sans text-xl font-bold text-white sm:text-2xl">
+                  Cleanroom to chemical plant
+                </p>
+              </div>
             </motion.div>
-            <motion.p
+
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.08 }}
-              className="max-w-md text-[0.95rem] leading-relaxed text-mota-mist lg:justify-self-end lg:pt-12 lg:text-right"
+              className="rounded-[1.5rem] bg-white p-6 shadow-soft sm:rounded-[2rem] sm:p-9"
             >
-              Cleanroom suits, lab coats, bouffant caps, shoe covers and more, manufactured
-              to exacting standards for regulated environments.
-            </motion.p>
-          </div>
+              <span className="mota-eyebrow-pill">Product Range</span>
+              <h2 className="mota-title-section mt-4">
+                What We{" "}
+                <span className="text-[#086dbe]">Manufacture</span>
+              </h2>
+              <p className="mt-4 text-[0.95rem] leading-relaxed text-mota-mist">
+                Specialty garments produced to exacting standards, with fabric and
+                finishing chosen for the environment they work in.
+              </p>
 
-          <div className="mt-10 grid gap-4 sm:mt-12 sm:gap-5 lg:grid-cols-[1.55fr_1fr] lg:items-stretch">
-            <motion.div
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.65 }}
-              className="grid overflow-hidden rounded-[1.75rem] bg-mota-blue sm:rounded-[2rem] lg:grid-cols-[0.9fr_1.1fr]"
-            >
-              <div className="relative min-h-[200px] p-4 sm:min-h-[240px] sm:p-5 lg:min-h-0 lg:p-6">
-                <div className="h-full overflow-hidden rounded-[1.25rem] sm:rounded-[1.5rem]">
-                  <img
-                    src="/hospital_uniform.png"
-                    alt="Pharma and cleanroom apparel"
-                    className="h-full w-full object-cover"
-                    loading="lazy"
-                  />
-                </div>
-              </div>
-              <div className="flex flex-col justify-center px-6 pb-7 pt-2 sm:px-8 sm:pb-9 lg:py-8 lg:pl-2 lg:pr-9">
-                <h3 className="mota-title-card text-white">
-                  Cleanroom to chemical, covered under one roof
-                </h3>
-                <p className="mt-3 text-sm leading-relaxed text-white/65 sm:mt-4">
-                  Specialised garments with controlled finishing for pharma, food and
-                  technical workplaces.
-                </p>
-                <CtaButton to="/contact" variant="accent" className="mt-6">
-                  Request Specs
-                </CtaButton>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.55, delay: 0.08 }}
-              className="rounded-[1.75rem] bg-white p-6 shadow-soft sm:rounded-[2rem] sm:p-7"
-            >
-              <h3 className="mota-title-card">Product Range</h3>
-              <div className="mt-5 grid grid-cols-1 gap-2.5">
+              <ul className="mt-6 grid gap-2.5 sm:grid-cols-2 sm:gap-3">
                 {pharmaProducts.map((product) => (
-                  <div
+                  <li
                     key={product}
-                    className="flex items-center gap-3 rounded-xl border border-mota-line bg-mota-cream/60 px-4 py-3 transition-colors hover:border-[#086dbe]/30 hover:bg-white"
+                    className="flex items-center gap-2.5 rounded-xl border border-mota-line bg-mota-cream/60 px-4 py-3 transition-colors duration-300 hover:border-[#086dbe]/30 hover:bg-white"
                   >
-                    <span className="h-2 w-2 shrink-0 rounded-full bg-[#086dbe]" />
-                    <p className="text-sm font-medium text-mota-ink">{product}</p>
-                  </div>
+                    <HiOutlineCheckCircle className="h-4 w-4 shrink-0 text-[#086dbe]" />
+                    <span className="text-sm font-medium text-mota-ink">{product}</span>
+                  </li>
                 ))}
-              </div>
+              </ul>
+
+              <CtaButton to="/contact" variant="accent" className="mt-7">
+                Request Specs
+              </CtaButton>
             </motion.div>
           </div>
+        </div>
+      </section>
 
-          <div className="mt-10 grid gap-4 sm:mt-12 sm:grid-cols-3 sm:gap-5">
-            {HIGHLIGHTS.map((item, i) => (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.08, duration: 0.55 }}
-                className="rounded-[1.5rem] border border-mota-line bg-white/90 p-6 shadow-soft transition-all duration-300 hover:border-[#086dbe]/25 hover:shadow-float sm:p-7"
-                data-reveal
-              >
-                <span className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[#086dbe]">
-                  0{i + 1}
-                </span>
-                <h3 className="mota-title-card mt-3">{item.title}</h3>
-                <div className="mt-3 h-0.5 w-10 rounded-full bg-[#086dbe]" />
-                <p className="mt-4 text-sm leading-relaxed text-mota-mist">{item.text}</p>
-              </motion.div>
-            ))}
-          </div>
+      {/* Compliance strip */}
+      <section className="section-pad relative overflow-hidden bg-mota-cream !pt-4">
+        <div className="container-mota relative">
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
+            className="relative overflow-hidden rounded-[1.75rem] bg-mota-blue px-6 py-10 sm:rounded-[2rem] sm:px-10 sm:py-12"
+          >
+            <div className="mota-dark-blob -right-20 -top-20 h-64 w-64" />
+            <div className="mota-dark-blob -bottom-16 -left-16 h-48 w-48 opacity-60" />
+
+            <div className="relative grid gap-8 sm:grid-cols-3 sm:gap-6 lg:gap-10">
+              {COMPLIANCE.map((item) => {
+                const Icon = item.icon;
+                return (
+                  <div key={item.title}>
+                    <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-white/10 text-white">
+                      <Icon className="h-5 w-5" />
+                    </div>
+                    <h3 className="mt-4 font-sans text-lg font-bold tracking-[-0.02em] text-white">
+                      {item.title}
+                    </h3>
+                    <div className="mt-3 h-0.5 w-10 rounded-full bg-[#086dbe]" />
+                    <p className="mt-3 text-sm leading-relaxed text-white/65">
+                      {item.text}
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
+          </motion.div>
         </div>
       </section>
 

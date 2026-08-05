@@ -21,6 +21,9 @@ export const domains = [
     icon: "school",
     image: "/school_uniform.jpg",
     cta: "Explore School Uniforms",
+    ctaLabel: "Visit The Uniform Lab",
+    href: "https://theuniformlab.in/",
+    external: true,
   },
   {
     id: "corporate",
@@ -33,6 +36,22 @@ export const domains = [
     icon: "corporate",
     image: "/corporate_uniforms.webp",
     cta: "Explore Corporate Uniforms",
+    ctaLabel: "Get a Quote",
+    action: "quote",
+  },
+  {
+    id: "gifting",
+    title: "Corporate Gifting",
+    subtitle: "Branded gifts that leave an impression",
+    description:
+      "Curated gift kits, branded merchandise and festive hampers, customised with your logo and delivered on schedule.",
+    color: "from-slate-50 to-blue-50",
+    accent: "#086dbe",
+    icon: "gifting",
+    image: "/img1.jpeg",
+    cta: "Explore Corporate Gifting",
+    ctaLabel: "Get a Quote",
+    action: "quote",
   },
 ];
 
@@ -157,34 +176,64 @@ export const uniformCategories = [
 
 export const specialtyCategories = [
   {
-    title: "Pharma/Food Industry",
-    description:
-      "We build partnerships through dialogue with our clients, offering appropriate pharma uniform solutions with value-driven service to gain trust.",
+    title: "Pharmaceutical",
+    icon: "pharma",
+    description: "Cleanroom suits, lab coats and controlled-environment apparel.",
   },
   {
-    title: "Chemical Industry",
-    description:
-      "Safe handling of hazardous substances demands reliable protective clothing. We ensure safe & reliable work clothing for chemical industry needs.",
+    title: "Food Processing",
+    icon: "food",
+    description: "Hygiene-first workwear for kitchens, plants and cold storage.",
   },
   {
-    title: "Aviation Industry",
-    description:
-      "One of the top aviation uniforms manufacturers & suppliers in Maharashtra. Wide range at economic prices, contact us for any aviation uniform queries.",
+    title: "Chemical",
+    icon: "chemical",
+    description: "Chemical-resistant clothing for safe handling of hazardous substances.",
   },
   {
-    title: "Safety Uniform",
-    description:
-      "Patterns that compliment your brand identity. Our designers study guidelines & incorporate elements, adding brand value and wearer pride.",
+    title: "Aviation",
+    icon: "aviation",
+    description: "Cabin crew, ground staff and technical uniforms for airlines.",
   },
   {
-    title: "Reflective Clothing",
-    description:
-      "Fulfilling varied client requirements with optimum quality reflective apparel designed with supreme fabric and sophisticated stitching.",
+    title: "Hospitals & Healthcare",
+    icon: "healthcare",
+    description: "Scrubs, doctor coats and staff wear built for long shifts.",
   },
   {
-    title: "Event & Customised",
-    description:
-      "Turn events into memorable experiences with custom uniforms, from nostalgic school themes to creative staff costumes and branded seating.",
+    title: "Security Services",
+    icon: "security",
+    description: "Authoritative guard uniforms with durable trims and badging.",
+  },
+  {
+    title: "Safety & Reflective",
+    icon: "reflective",
+    description: "High-visibility apparel with reflective tape for site work.",
+  },
+  {
+    title: "Automobile",
+    icon: "automobile",
+    description: "Workshop coveralls and service-bay uniforms for dealerships.",
+  },
+  {
+    title: "Manufacturing",
+    icon: "manufacturing",
+    description: "Hard-wearing shop-floor uniforms for engineering and heavy units.",
+  },
+  {
+    title: "Hospitality & Events",
+    icon: "hospitality",
+    description: "Front-of-house, banquet and themed event staff costumes.",
+  },
+  {
+    title: "Education",
+    icon: "education",
+    description: "School, college and campus staff uniform programs.",
+  },
+  {
+    title: "Corporate Offices",
+    icon: "corporate",
+    description: "Formal shirts, blazers and branded workwear for teams.",
   },
 ];
 
@@ -210,40 +259,225 @@ export const accessories = [
 ];
 
 export const tshirtTypes = [
-  "Corporate Branded T-Shirts",
-  "Event & Promotional Tees",
-  "Sports & Activity Wear",
-  "Polo Shirts",
-  "Round Neck Casuals",
-  "Custom Print & Embroidery",
+  {
+    title: "Round Neck",
+    fabric: "Cotton bio-wash",
+    gsm: "180 GSM",
+    description:
+      "The everyday branded tee. Soft handfeel, holds colour after repeated washes.",
+    bestFor: "Giveaways, staff casuals, campaigns",
+    image: "/tshirts/round-neck.jpg",
+  },
+  {
+    title: "Polo / Collar",
+    fabric: "Cotton matty, pique",
+    gsm: "220 GSM",
+    description:
+      "Structured collar and placket that keeps a smart look through a full shift.",
+    bestFor: "Corporate teams, showrooms, front desk",
+    image: "/tshirts/polo.jpg",
+  },
+  {
+    title: "V-Neck",
+    fabric: "Cotton single jersey",
+    gsm: "180 GSM",
+    description:
+      "A softer neckline that sits well under jackets and layered uniforms.",
+    bestFor: "Retail staff, casual workwear",
+    image: "/tshirts/v-neck.jpg",
+  },
+  {
+    title: "Henley Placket",
+    fabric: "Cotton slub",
+    gsm: "190 GSM",
+    description:
+      "Buttoned placket without a collar, a premium finish for smart-casual kits.",
+    bestFor: "Cafes, boutique hospitality",
+    image: "/tshirts/henley.jpg",
+  },
+  {
+    title: "Full Sleeve",
+    fabric: "Cotton bio-wash",
+    gsm: "180 GSM",
+    description:
+      "Full arm coverage for cooler months and outdoor field teams.",
+    bestFor: "Winter kits, field staff, logistics",
+    image: "/tshirts/full-sleeve.jpg",
+  },
+  {
+    title: "Dry-Fit Sports",
+    fabric: "Polyester micro, honeycomb",
+    gsm: "140 GSM",
+    description:
+      "Moisture-wicking knit that dries fast and stays light during activity.",
+    bestFor: "Marathons, sports days, gyms",
+    image: "/tshirts/dry-fit.jpg",
+  },
+  {
+    title: "Hooded Tee",
+    fabric: "Cotton terry, fleece",
+    gsm: "240 GSM",
+    description:
+      "Hood and kangaroo pocket, a favourite for merchandise and college drops.",
+    bestFor: "College fests, brand merch",
+    image: "/tshirts/hooded.jpg",
+  },
+  {
+    title: "Raglan Sleeve",
+    fabric: "Cotton blend",
+    gsm: "180 GSM",
+    description:
+      "Contrast diagonal sleeves with a wider range of shoulder movement.",
+    bestFor: "Team kits, baseball styling",
+    image: "/tshirts/raglan.jpg",
+  },
+  {
+    title: "Drop Shoulder",
+    fabric: "Heavy cotton",
+    gsm: "220 GSM",
+    description:
+      "Relaxed oversized cut with a heavier fall, built for a modern look.",
+    bestFor: "Youth brands, campus merch",
+    image: "/tshirts/drop-shoulder.jpg",
+  },
+  {
+    title: "Sublimation Jersey",
+    fabric: "Polyester interlock",
+    gsm: "160 GSM",
+    description:
+      "Edge-to-edge printing with no cracking, since the ink dyes the fabric.",
+    bestFor: "Sports jerseys, all-over graphics",
+    image: "/tshirts/sublimation.jpg",
+  },
+  {
+    title: "Reflective Safety Tee",
+    fabric: "Polyester with reflective tape",
+    gsm: "160 GSM",
+    description:
+      "High-visibility base with stitched reflective tape for low-light sites.",
+    bestFor: "Site crews, warehouses, logistics",
+    image: "/tshirts/reflective.jpg",
+  },
+  {
+    title: "Kids & School Tee",
+    fabric: "Cotton PC",
+    gsm: "180 GSM",
+    description:
+      "Durable house-colour tees sized for children and built for rough use.",
+    bestFor: "School sports houses, annual days",
+    image: "/tshirts/kids.jpg",
+  },
+];
+
+export const printMethods = [
+  {
+    title: "Computerised Embroidery",
+    text: "6-head automated machines for crisp logos, names and crest work.",
+  },
+  {
+    title: "Screen Printing",
+    text: "Cost-effective spot colour printing for large bulk quantities.",
+  },
+  {
+    title: "Sublimation",
+    text: "Full-surface graphics dyed into polyester, no cracking or peeling.",
+  },
+  {
+    title: "DTF Transfer",
+    text: "Photographic, multi-colour artwork on small and medium runs.",
+  },
+  {
+    title: "Puff & High-Density",
+    text: "Raised textured prints for a premium merchandise finish.",
+  },
+  {
+    title: "Vinyl & Numbering",
+    text: "Names, squad numbers and sponsor marks for team kits.",
+  },
 ];
 
 export const workforce = [
-  { role: "Seamstress and Pattern Maker", count: "4 personnel" },
-  { role: "Embroidery Operators", count: "2 personnel" },
-  { role: "Final QC and Finishing", count: "8 personnel" },
-  { role: "Press men", count: "2 personnel" },
-  { role: "Machine Operators", count: "60 personnel" },
-  { role: "Inline Quality checkers", count: "2 personnel" },
-  { role: "Packaging and Despatch", count: "4 personnel" },
-  { role: "Helpers", count: "6 personnel" },
+  { role: "Machine Operators", count: 60 },
+  { role: "Final QC and Finishing", count: 8 },
+  { role: "Helpers", count: 6 },
+  { role: "Seamstress and Pattern Makers", count: 4 },
+  { role: "Packaging and Despatch", count: 4 },
+  { role: "Embroidery Operators", count: 2 },
+  { role: "Inline Quality Checkers", count: 2 },
+  { role: "Press Men", count: 2 },
 ];
 
 export const machines = [
-  "Single needle high speed lock stitch automated machines (Juki / Brother): 60 + 30 reserve",
-  "Placket making machines: 2",
-  "Button Hole: 2",
-  "5 Thread Lock stitch (customisable): 2",
-  "Flat bed overlock: 1",
-  "Manual Embroidery machine: 2",
-  "Sublimation Textile Printing Machine: 1",
-  "Washing Unit: 1",
-  "Button Attachment: 2",
-  "Snap Button: 1",
-  "Overlock machines: 4",
-  "Side hem machine: 2",
-  "6 head automated embroidery machine: 1",
-  "Steam press with suction: 4",
+  {
+    name: "Single needle high speed lock stitch (Juki / Brother)",
+    count: "60 + 30 reserve",
+    dept: "Stitching",
+  },
+  { name: "Overlock machines", count: "4", dept: "Stitching" },
+  { name: "5 thread lock stitch, customisable", count: "2", dept: "Stitching" },
+  { name: "Placket making machines", count: "2", dept: "Stitching" },
+  { name: "Side hem machine", count: "2", dept: "Stitching" },
+  { name: "Flat bed overlock", count: "1", dept: "Stitching" },
+  { name: "6 head automated embroidery machine", count: "1", dept: "Embroidery and Printing" },
+  { name: "Manual embroidery machine", count: "2", dept: "Embroidery and Printing" },
+  { name: "Sublimation textile printing machine", count: "1", dept: "Embroidery and Printing" },
+  { name: "Steam press with suction", count: "4", dept: "Washing and Finishing" },
+  { name: "Washing unit", count: "1", dept: "Washing and Finishing" },
+  { name: "Button hole machine", count: "2", dept: "Washing and Finishing" },
+  { name: "Button attachment", count: "2", dept: "Washing and Finishing" },
+  { name: "Snap button", count: "1", dept: "Washing and Finishing" },
+];
+
+/** Click-through walkthrough of the Baramati production floor */
+export const productionStages = [
+  {
+    id: "fabric",
+    label: "Fabric Intake",
+    title: "Fabric sourcing and inspection",
+    text: "Every roll from Raymond, Mafatlal and Siyaram's is checked for shade, width and defects, then relaxed before it reaches the cutting table.",
+    image: "/factory/fabric.jpg",
+    points: ["Shade and GSM verification", "Roll-wise defect mapping", "Fabric relaxation"],
+  },
+  {
+    id: "cutting",
+    label: "Cutting",
+    title: "Pattern making and layered cutting",
+    text: "Patterns are graded in-house, then spread and cut in layers so that panels stay identical across an entire consignment.",
+    image: "/factory/cutting.jpg",
+    points: ["In-house pattern grading", "Layered spreading", "Bundle-wise ticketing"],
+  },
+  {
+    id: "stitching",
+    label: "Stitching",
+    title: "The main production line",
+    text: "Sixty automated Juki and Brother lock stitch machines run a single 8 hour shift, backed by thirty reserve heads so a breakdown never stalls a delivery.",
+    image: "/factory/stitching.jpg",
+    points: ["60 machines live, 30 reserve", "Operation-wise line balancing", "500 to 850 pieces a day"],
+  },
+  {
+    id: "branding",
+    label: "Embroidery",
+    title: "Embroidery and printing",
+    text: "A 6-head automated embroidery machine handles logos and crests, while the sublimation unit covers full-surface graphics on polyester.",
+    image: "/factory/embroidery.jpg",
+    points: ["6-head automated embroidery", "Sublimation printing", "Digitised logo library"],
+  },
+  {
+    id: "finishing",
+    label: "Finishing",
+    title: "Washing, pressing and finishing",
+    text: "An in-house washing unit and four suction steam presses give every garment its final handfeel and shape before inspection.",
+    image: "/factory/finishing.jpg",
+    points: ["In-house washing unit", "4 suction steam presses", "Thread and trim clean-up"],
+  },
+  {
+    id: "despatch",
+    label: "QC and Despatch",
+    title: "Inspection and despatch",
+    text: "In-line checkers work alongside the line and a final QC team clears each consignment before it is size-sorted, packed and shipped.",
+    image: "/factory/despatch.jpg",
+    points: ["In-line and final QC", "Size-wise sorting", "Consignment-wise packing"],
+  },
 ];
 
 export const clientCategories = [

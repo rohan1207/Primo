@@ -4,14 +4,22 @@ import { AnimatePresence, motion } from "framer-motion";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import ScrollProgress from "./ScrollProgress";
-import { useLenis } from "../../hooks/useAnimations";
+import { useLenis, scrollToTop } from "../../hooks/useAnimations";
 
 export default function Layout() {
   const location = useLocation();
   useLenis();
 
+  // Stops the browser restoring a mid-page position on reload or back/forward,
+  // which would otherwise land the user in the footer of the new page.
   useEffect(() => {
-    window.scrollTo(0, 0);
+    if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual";
+    }
+  }, []);
+
+  useEffect(() => {
+    scrollToTop();
   }, [location.pathname]);
 
   return (

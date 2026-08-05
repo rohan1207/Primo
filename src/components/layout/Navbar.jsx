@@ -5,10 +5,12 @@ import { HiOutlineMenuAlt3, HiX } from "react-icons/hi";
 import { navLinks } from "../../data/content";
 import LogoMark from "../svg/LogoMark";
 import CtaButton from "../ui/CtaButton";
+import QuoteModal from "../ui/QuoteModal";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [quoteOpen, setQuoteOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -21,12 +23,14 @@ export default function Navbar() {
     setMobileOpen(false);
   }, [location.pathname]);
 
+  // The quote modal locks scrolling too, so it has to be accounted for here,
+  // otherwise closing the drawer to open the modal would release the lock.
   useEffect(() => {
-    document.body.style.overflow = mobileOpen ? "hidden" : "";
+    document.body.style.overflow = mobileOpen || quoteOpen ? "hidden" : "";
     return () => {
       document.body.style.overflow = "";
     };
-  }, [mobileOpen]);
+  }, [mobileOpen, quoteOpen]);
 
   return (
     <>
@@ -70,11 +74,12 @@ export default function Navbar() {
           </div>
 
           <CtaButton
-            to="/contact"
+            type="button"
+            onClick={() => setQuoteOpen(true)}
             variant="white"
             className="hidden shadow-none hover:shadow-none lg:inline-flex"
           >
-            Enquire Now
+            Get a Quote
           </CtaButton>
 
           <button
@@ -153,17 +158,22 @@ export default function Navbar() {
               </div>
 
               <CtaButton
-                to="/contact"
+                type="button"
                 variant="white"
                 className="mt-8 shadow-none"
-                onClick={() => setMobileOpen(false)}
+                onClick={() => {
+                  setMobileOpen(false);
+                  setQuoteOpen(true);
+                }}
               >
-                Enquire Now
+                Get a Quote
               </CtaButton>
             </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
+
+      <QuoteModal open={quoteOpen} onClose={() => setQuoteOpen(false)} />
     </>
   );
 }

@@ -3,7 +3,7 @@ import EnquiryForm from "../ui/EnquiryForm";
 
 export default function EnquirySection() {
   return (
-    <section className="section-pad relative overflow-hidden bg-mota-cream">
+    <section className="section-pad relative overflow-hidden bg-mota-cream !pb-16 sm:!pb-20">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_left,rgba(8,109,190,0.09),transparent_50%)]" />
 
       <div className="container-mota relative">

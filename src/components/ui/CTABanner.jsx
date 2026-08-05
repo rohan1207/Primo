@@ -15,7 +15,9 @@ export default function CTABanner({
   const isExternal = primaryTo.startsWith("tel:") || primaryTo.startsWith("mailto:");
 
   return (
-    <section className={`section-pad !py-14 sm:!py-20 ${isLight ? "bg-mota-cream" : ""}`}>
+    <section
+      className={`section-pad !pt-0 !pb-14 sm:!pb-20 ${isLight ? "bg-mota-cream" : ""}`}
+    >
       <div className="container-mota">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
