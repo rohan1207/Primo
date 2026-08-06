@@ -7,11 +7,11 @@ import { tshirtTypes, printMethods } from "../data/content";
 
 /** Used until the dedicated /tshirts photography is added to /public */
 const FALLBACKS = [
-  "/college_uniforms.jpg",
-  "/corporate_uniforms.webp",
-  "/school_uniform.jpg",
-  "/hotel_uniform.jpg",
-  "/industrial_uniform.jpg",
+  "/college_uniforms.png",
+  "/corporate_uniforms.png",
+  "/school_uniform.png",
+  "/hotel_uniform.png",
+  "/industrial_uniform.png",
   "/img1.jpeg",
 ];
 
@@ -60,7 +60,7 @@ export default function TShirts() {
               <div className="aspect-[5/4] sm:aspect-[4/3]">
                 <ImageWithFallback
                   src="/tshirts/hero.jpg"
-                  fallback="/college_uniforms.jpg"
+                  fallback="/college_uniforms.png"
                   alt="Branded t-shirts and promotional wear by Mota"
                   className="h-full w-full object-cover"
                 />
@@ -69,7 +69,7 @@ export default function TShirts() {
             <div className="absolute -bottom-4 -left-3 hidden overflow-hidden rounded-2xl border border-white/50 shadow-float sm:block sm:-bottom-5 sm:-left-5 sm:w-[42%]">
               <ImageWithFallback
                 src="/tshirts/hero-inset.jpg"
-                fallback="/corporate_uniforms.webp"
+                fallback="/corporate_uniforms.png"
                 alt="Corporate branded apparel"
                 className="aspect-[4/3] w-full object-cover"
               />

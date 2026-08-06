@@ -63,7 +63,7 @@ export default function AccessoriesPage() {
             <div className="overflow-hidden rounded-[1.75rem] shadow-[0_24px_56px_rgba(30,58,95,0.16)] sm:rounded-[2rem]">
               <div className="aspect-[5/4] sm:aspect-[4/3]">
                 <img
-                  src="/corporate_uniforms.webp"
+                  src="/corporate_uniforms.png"
                   alt="Uniform accessories and finishing by Mota"
                   className="h-full w-full object-cover"
                 />
@@ -162,7 +162,7 @@ export default function AccessoriesPage() {
               <div className="relative min-h-[200px] p-4 sm:min-h-[240px] sm:p-5 lg:min-h-0 lg:p-6">
                 <div className="h-full overflow-hidden rounded-[1.25rem] sm:rounded-[1.5rem]">
                   <img
-                    src="/college_uniforms.jpg"
+                    src="/college_uniforms.png"
                     alt="Branded uniform finishing"
                     className="h-full w-full object-cover"
                     loading="lazy"

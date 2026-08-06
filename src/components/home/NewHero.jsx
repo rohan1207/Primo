@@ -27,12 +27,12 @@ const TICKER_ITEMS = [
 ];
 
 const HERO_IMAGES = [
-  { src: "/corporate_uniforms.webp", alt: "Corporate uniforms by Mota Group" },
-  { src: "/school_uniform.jpg", alt: "School uniforms by Mota Group" },
+  { src: "/corporate_uniforms.png", alt: "Corporate uniforms by Mota Group" },
+  { src: "/school_uniform.png", alt: "School uniforms by Mota Group" },
   { src: "/hospital_uniform.png", alt: "Hospital uniforms by Mota Group" },
-  { src: "/industrial_uniform.jpg", alt: "Industrial uniforms by Mota Group" },
-  { src: "/college_uniforms.jpg", alt: "College uniforms by Mota Group" },
-  { src: "/hotel_uniform.jpg", alt: "Hospitality uniforms by Mota Group" },
+  { src: "/industrial_uniform.png", alt: "Industrial uniforms by Mota Group" },
+  { src: "/college_uniforms.png", alt: "College uniforms by Mota Group" },
+  { src: "/hotel_uniform.png", alt: "Hospitality uniforms by Mota Group" },
 ];
 
 const SLIDE_MS = 2500;

@@ -28,10 +28,10 @@ const STATS = [
 /** Used until dedicated factory photography is added to /public/factory */
 const STAGE_FALLBACKS = {
   fabric: "/img1.jpeg",
-  cutting: "/industrial_uniform.jpg",
-  stitching: "/corporate_uniforms.webp",
-  branding: "/college_uniforms.jpg",
-  finishing: "/hotel_uniform.jpg",
+  cutting: "/industrial_uniform.png",
+  stitching: "/corporate_uniforms.png",
+  branding: "/college_uniforms.png",
+  finishing: "/hotel_uniform.png",
   despatch: "/hospital_uniform.png",
 };
 
@@ -57,66 +57,74 @@ export default function Infrastructure() {
 
   return (
     <>
-      {/* Hero */}
-      <section className="relative overflow-hidden bg-mota-blue pt-[var(--header-height)]">
-        <div className="absolute inset-0">
-          <ImageWithFallback
-            src="/factory/hero.jpg"
-            fallback="/img1.jpeg"
-            alt="Mota manufacturing facility in Baramati"
-            className="h-full w-full object-cover opacity-30"
-          />
-          <div className="absolute inset-0 bg-gradient-to-br from-mota-blue via-mota-blue/90 to-mota-blue/70" />
-        </div>
+      {/* Hero — split layout so the factory video stays fully visible */}
+      <section className="relative overflow-hidden bg-mota-cream pt-[var(--header-height)]">
+        <div className="relative lg:grid lg:min-h-[calc(100svh-var(--header-height))] lg:grid-cols-[1fr_1.05fr]">
+          {/* Video panel */}
+          <div className="relative order-1 aspect-[16/10] w-full sm:aspect-[16/9] lg:order-2 lg:aspect-auto lg:min-h-[calc(100svh-var(--header-height))]">
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="absolute inset-0 h-full w-full object-cover"
+              aria-label="Mota manufacturing facility in Baramati"
+            >
+              <source src="/hero.mp4" type="video/mp4" />
+            </video>
+            {/* Soft edge blend into the content column on desktop */}
+            <div className="pointer-events-none absolute inset-y-0 left-0 hidden w-28 bg-gradient-to-r from-mota-cream via-mota-cream/40 to-transparent lg:block" />
+            {/* Light bottom fade on mobile so the section transition feels clean */}
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-mota-cream to-transparent lg:hidden" />
+          </div>
 
-        <div className="container-mota relative px-5 py-14 sm:px-8 sm:py-16 lg:py-24">
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-            className="max-w-2xl"
-          >
-            <span className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-3.5 py-1.5 text-[11px] font-semibold uppercase tracking-[0.16em] text-white/85 backdrop-blur-sm">
-              Infrastructure
-            </span>
-            <h1 className="mt-5 font-sans text-[clamp(2.25rem,5vw,3.6rem)] font-bold leading-[1.08] tracking-[-0.03em] text-white">
-              Inside our{" "}
-              <span className="text-[#5aa6e8]">Baramati plant</span>
-            </h1>
-            <p className="mt-5 max-w-lg text-[0.95rem] leading-relaxed text-white/70 sm:mt-6 sm:text-base">
-              40,000 sqft of integrated production. Walk the floor stage by stage, from
-              fabric intake to the packed consignment leaving our despatch bay.
-            </p>
-            <div className="mt-7 flex flex-wrap items-center gap-3 sm:mt-8">
-              <CtaButton to="/contact" variant="accent">
-                Schedule a Visit
-              </CtaButton>
-              <CtaButton to="/about" variant="white">
-                About Us
-              </CtaButton>
+          {/* Copy + stats */}
+          <div className="relative z-10 order-2 flex flex-col justify-center px-5 py-10 sm:px-8 sm:py-14 lg:order-1 lg:py-16 lg:pl-8 xl:pl-12">
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+              className="max-w-xl"
+            >
+              <span className="mota-eyebrow-pill">Infrastructure</span>
+              <h1 className="mt-5 font-sans text-[clamp(2.25rem,5vw,3.6rem)] font-bold leading-[1.08] tracking-[-0.03em] text-mota-ink">
+                Inside our{" "}
+                <span className="text-[#086dbe]">Baramati plant</span>
+              </h1>
+              <p className="mt-5 max-w-lg text-[0.95rem] leading-relaxed text-mota-mist sm:mt-6 sm:text-base">
+                40,000 sqft of integrated production. Walk the floor stage by stage, from
+                fabric intake to the packed consignment leaving our despatch bay.
+              </p>
+              <div className="mt-7 flex flex-wrap items-center gap-3 sm:mt-8">
+                <CtaButton to="/contact" variant="accent">
+                  Schedule a Visit
+                </CtaButton>
+                <CtaButton to="/about" variant="outline">
+                  About Us
+                </CtaButton>
+              </div>
+            </motion.div>
+
+            <div className="mt-10 grid grid-cols-2 gap-3 sm:mt-12 sm:gap-4 lg:grid-cols-2 xl:grid-cols-4">
+              {STATS.map((stat, i) => (
+                <motion.div
+                  key={stat.label}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.2 + i * 0.07, duration: 0.5 }}
+                  className="rounded-2xl border border-mota-line bg-white/90 px-4 py-5 shadow-soft transition-all duration-300 hover:-translate-y-0.5 hover:border-[#086dbe]/25 hover:shadow-float sm:px-5 sm:py-6"
+                >
+                  <AnimatedCounter
+                    value={stat.value}
+                    suffix={stat.suffix}
+                    className="font-sans text-2xl font-bold tracking-tight text-mota-ink sm:text-3xl"
+                  />
+                  <p className="mt-1.5 text-[11px] font-medium uppercase tracking-[0.12em] text-mota-mist sm:text-xs">
+                    {stat.label}
+                  </p>
+                </motion.div>
+              ))}
             </div>
-          </motion.div>
-
-          {/* Stat strip */}
-          <div className="mt-12 grid grid-cols-2 gap-3 sm:mt-14 sm:gap-4 lg:grid-cols-4">
-            {STATS.map((stat, i) => (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2 + i * 0.07, duration: 0.5 }}
-                className="rounded-2xl border border-white/12 bg-white/[0.07] px-4 py-5 backdrop-blur-sm transition-colors duration-300 hover:border-white/25 sm:px-5 sm:py-6"
-              >
-                <AnimatedCounter
-                  value={stat.value}
-                  suffix={stat.suffix}
-                  className="font-sans text-2xl font-bold tracking-tight text-white sm:text-4xl"
-                />
-                <p className="mt-1.5 text-[11px] font-medium uppercase tracking-[0.12em] text-white/55 sm:text-xs">
-                  {stat.label}
-                </p>
-              </motion.div>
-            ))}
           </div>
         </div>
       </section>

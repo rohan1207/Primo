@@ -19,7 +19,7 @@ export const domains = [
     color: "from-blue-50 to-slate-100",
     accent: "#1e3a5f",
     icon: "school",
-    image: "/school_uniform.jpg",
+    image: "/school_uniform.png",
     cta: "Explore School Uniforms",
     ctaLabel: "Visit The Uniform Lab",
     href: "https://theuniformlab.in/",
@@ -34,7 +34,7 @@ export const domains = [
     color: "from-slate-50 to-amber-50",
     accent: "#b8892a",
     icon: "corporate",
-    image: "/corporate_uniforms.webp",
+    image: "/corporate_uniforms.png",
     cta: "Explore Corporate Uniforms",
     ctaLabel: "Get a Quote",
     action: "quote",
@@ -48,7 +48,7 @@ export const domains = [
     color: "from-slate-50 to-blue-50",
     accent: "#086dbe",
     icon: "gifting",
-    image: "/img1.jpeg",
+    image: "/gifting.webp",
     cta: "Explore Corporate Gifting",
     ctaLabel: "Get a Quote",
     action: "quote",
@@ -74,7 +74,7 @@ export const products = [
     description:
       "Identity, pride, and community, crafted for educational institutions of every scale.",
     gradient: "from-blue-100 to-slate-50",
-    image: "/school_uniform.jpg",
+    image: "/school_uniform.png",
   },
   {
     title: "College Uniforms",
@@ -82,7 +82,7 @@ export const products = [
     description:
       "Patterns that compliment your brand identity, designed with meticulous attention to guidelines.",
     gradient: "from-indigo-100 to-blue-50",
-    image: "/college_uniforms.jpg",
+    image: "/college_uniforms.png",
   },
   {
     title: "Hospital Uniforms",
@@ -98,7 +98,7 @@ export const products = [
     description:
       "End-to-end service from design to delivery, managing supply and wearer coordination.",
     gradient: "from-slate-100 to-stone-50",
-    image: "/corporate_uniforms.webp",
+    image: "/corporate_uniforms.png",
   },
   {
     title: "Industrial Uniforms",
@@ -106,7 +106,7 @@ export const products = [
     description:
       "Durable, functional workwear engineered for demanding industrial environments.",
     gradient: "from-amber-100 to-orange-50",
-    image: "/industrial_uniform.jpg",
+    image: "/industrial_uniform.png",
   },
   {
     title: "Security Uniforms",
@@ -120,14 +120,14 @@ export const products = [
 
 /** Local public assets used across the home experience */
 export const publicGallery = [
-  "/school_uniform.jpg",
-  "/college_uniforms.jpg",
+  "/school_uniform.png",
+  "/college_uniforms.png",
   "/hospital_uniform.png",
-  "/corporate_uniforms.webp",
-  "/industrial_uniform.jpg",
+  "/corporate_uniforms.png",
+  "/industrial_uniform.png",
   "/security_uniform.png",
-  "/Autombile_Uniform.jpg",
-  "/hotel_uniform.jpg",
+  "/Autombile_Uniform.png",
+  "/hotel_uniform.png",
   "/img1.jpeg",
 ];
 
@@ -564,7 +564,7 @@ export const aboutHighlights = [
   {
     title: "25+ Years of Trust",
     text: aboutContent.experience,
-    image: "/school_uniform.jpg",
+    image: "/school_uniform.png",
   },
   {
     title: "State-of-Art Facility",
@@ -574,12 +574,12 @@ export const aboutHighlights = [
   {
     title: "Premium Fabric Partners",
     text: aboutContent.fabrics,
-    image: "/corporate_uniforms.webp",
+    image: "/corporate_uniforms.png",
   },
   {
     title: "End-to-End Excellence",
     text: aboutContent.position,
-    image: "/industrial_uniform.jpg",
+    image: "/industrial_uniform.png",
   },
 ];
 

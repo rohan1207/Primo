@@ -98,7 +98,7 @@ export default function Specialty() {
             <div className="overflow-hidden rounded-[1.75rem] shadow-[0_24px_56px_rgba(30,58,95,0.16)] sm:rounded-[2rem]">
               <div className="aspect-[5/4] sm:aspect-[4/3]">
                 <img
-                  src="/industrial_uniform.jpg"
+                  src="/industrial_uniform.png"
                   alt="Specialty industrial uniforms by Mota"
                   className="h-full w-full object-cover"
                 />

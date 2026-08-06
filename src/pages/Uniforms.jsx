@@ -5,14 +5,14 @@ import CTABanner from "../components/ui/CTABanner";
 import { uniformCategories } from "../data/content";
 
 const CATEGORY_IMAGES = [
-  "/corporate_uniforms.webp",
-  "/college_uniforms.jpg",
-  "/school_uniform.jpg",
+  "/corporate_uniforms.png",
+  "/college_uniforms.png",
+  "/school_uniform.png",
   "/security_uniform.png",
-  "/industrial_uniform.jpg",
+  "/industrial_uniform.png",
   "/hospital_uniform.png",
-  "/hotel_uniform.jpg",
-  "/Autombile_Uniform.jpg",
+  "/hotel_uniform.png",
+  "/Autombile_Uniform.png",
 ];
 
 const PROCESS = [
@@ -80,7 +80,7 @@ export default function Uniforms() {
             <div className="overflow-hidden rounded-[1.75rem] shadow-[0_24px_56px_rgba(30,58,95,0.16)] sm:rounded-[2rem]">
               <div className="aspect-[5/4] sm:aspect-[4/3]">
                 <img
-                  src="/school_uniform.jpg"
+                  src="/school_uniform.png"
                   alt="School and institutional uniforms by Mota"
                   className="h-full w-full object-cover"
                 />
@@ -88,7 +88,7 @@ export default function Uniforms() {
             </div>
             <div className="absolute -bottom-4 -left-3 hidden overflow-hidden rounded-2xl border border-white/50 shadow-float sm:block sm:-bottom-5 sm:-left-5 sm:w-[42%]">
               <img
-                src="/corporate_uniforms.webp"
+                src="/corporate_uniforms.png"
                 alt="Corporate uniforms"
                 className="aspect-[4/3] w-full object-cover"
               />
@@ -196,7 +196,7 @@ export default function Uniforms() {
               <div className="relative min-h-[200px] p-4 sm:min-h-[240px] sm:p-5 lg:min-h-0 lg:p-6">
                 <div className="h-full overflow-hidden rounded-[1.25rem] sm:rounded-[1.5rem]">
                   <img
-                    src="/industrial_uniform.jpg"
+                    src="/industrial_uniform.png"
                     alt="Mota manufacturing quality"
                     className="h-full w-full object-cover"
                     loading="lazy"

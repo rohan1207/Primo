@@ -172,7 +172,7 @@ export default function About() {
           >
             <div className={`hidden w-[26%] sm:block ${imageFrame}`}>
               <img
-                src="/college_uniforms.jpg"
+                src="/college_uniforms.png"
                 alt="College uniforms"
                 className="aspect-[3/4] w-full object-cover"
               />
@@ -180,7 +180,7 @@ export default function About() {
 
             <div className={`relative w-[52%] sm:w-[40%] ${imageFrame}`}>
               <img
-                src="/school_uniform.jpg"
+                src="/school_uniform.png"
                 alt="Mota uniforms craftsmanship"
                 className="aspect-[3/4] w-full object-cover"
               />
@@ -188,7 +188,7 @@ export default function About() {
 
             <div className={`w-[42%] sm:w-[26%] ${imageFrame}`}>
               <img
-                src="/corporate_uniforms.webp"
+                src="/corporate_uniforms.png"
                 alt="Corporate uniforms"
                 className="aspect-[3/4] w-full object-cover"
               />
