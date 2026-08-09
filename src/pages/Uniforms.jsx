@@ -81,9 +81,9 @@ export default function Uniforms() {
               From school campuses to corporate headquarters, every uniform tells your
               story. Designed, produced and delivered from Baramati.
             </p>
-            <div className="mt-7 flex flex-wrap items-center gap-3 sm:mt-8">
+            <div className="mt-7 flex flex-wrap items-center gap-2.5 sm:mt-8 sm:gap-3">
               <CtaButton to="/contact" variant="accent">
-                Request a Quote
+                Get a Quote
               </CtaButton>
               <CtaButton to="/clients" variant="outline">
                 Our Clients
@@ -149,7 +149,7 @@ export default function Uniforms() {
                     duration: 0.6,
                     ease: [0.22, 1, 0.36, 1],
                   }}
-                  className="group flex flex-col overflow-hidden rounded-2xl border border-mota-line bg-white shadow-soft transition-all duration-300 hover:-translate-y-1 hover:border-[#086dbe]/25 hover:shadow-float sm:rounded-[1.75rem]"
+                  className="group flex h-full flex-col overflow-hidden rounded-2xl border border-mota-line bg-white shadow-soft transition-all duration-300 hover:-translate-y-1 hover:border-[#086dbe]/25 hover:shadow-float sm:rounded-[1.75rem]"
                   data-reveal
                 >
                   <div className="relative aspect-[16/10] overflow-hidden">

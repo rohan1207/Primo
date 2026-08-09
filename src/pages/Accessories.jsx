@@ -45,9 +45,9 @@ export default function AccessoriesPage() {
               High quality trims and accessories that complete every uniform with branded
               excellence, badges, belts, ties and more.
             </p>
-            <div className="mt-7 flex flex-wrap items-center gap-3 sm:mt-8">
+            <div className="mt-7 flex flex-wrap items-center gap-2.5 sm:mt-8 sm:gap-3">
               <CtaButton to="/contact" variant="accent">
-                Enquire Now
+                Get a Quote
               </CtaButton>
               <CtaButton to="/uniforms" variant="outline">
                 View Uniforms
@@ -105,7 +105,7 @@ export default function AccessoriesPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.04, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-                className="group relative overflow-hidden rounded-[1.5rem] border border-mota-line bg-white/90 p-5 shadow-soft transition-all duration-300 hover:-translate-y-1 hover:border-[#086dbe]/25 hover:shadow-float sm:p-6"
+                className="group relative flex h-full flex-col overflow-hidden rounded-[1.5rem] border border-mota-line bg-white/90 p-4 shadow-soft transition-all duration-300 hover:-translate-y-1 hover:border-[#086dbe]/25 hover:shadow-float sm:p-6"
                 data-reveal
               >
                 <div className="pointer-events-none absolute -right-6 -top-6 h-24 w-24 rounded-full bg-[#086dbe]/8 transition-transform duration-500 group-hover:scale-150" />
@@ -116,7 +116,9 @@ export default function AccessoriesPage() {
                   {item}
                 </p>
                 <div className="relative mt-3 h-0.5 w-8 rounded-full bg-[#086dbe] transition-all duration-500 group-hover:w-14" />
-                <QuoteCta subject={item} variant="link" className="relative mt-3" />
+                <div className="relative mt-auto pt-3">
+                  <QuoteCta subject={item} variant="link" />
+                </div>
               </motion.div>
             ))}
           </div>
@@ -216,7 +218,7 @@ export default function AccessoriesPage() {
           </>
         }
         description="Badges, ties, belts, socks and more, sourced and customised to match your uniform program."
-        primaryLabel="Enquire Now"
+        primaryLabel="Get a Quote"
         primaryTo="/contact"
         secondaryLabel="View Uniforms"
         secondaryTo="/uniforms"

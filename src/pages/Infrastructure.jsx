@@ -95,7 +95,7 @@ export default function Infrastructure() {
                 40,000 sqft of integrated production. Walk the floor stage by stage, from
                 fabric intake to the packed consignment leaving our despatch bay.
               </p>
-              <div className="mt-7 flex flex-wrap items-center gap-3 sm:mt-8">
+              <div className="mt-7 flex flex-wrap items-center gap-2.5 sm:mt-8 sm:gap-3">
                 <CtaButton to="/contact" variant="accent">
                   Schedule a Visit
                 </CtaButton>

@@ -31,7 +31,7 @@ export default function Contact() {
               Reach our Pune office or Baramati manufacturing plant, we&apos;re here to
               help with design, sampling and bulk delivery.
             </p>
-            <div className="mt-7 flex flex-wrap items-center gap-3 sm:mt-8">
+            <div className="mt-7 flex flex-wrap items-center gap-2.5 sm:mt-8 sm:gap-3">
               <CtaButton href="tel:+919822421212" variant="accent">
                 Call Us
               </CtaButton>

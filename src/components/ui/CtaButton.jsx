@@ -38,8 +38,10 @@ export default function CtaButton({
   };
 
   const classes = [
-    "group inline-flex w-fit max-w-full items-center justify-center rounded-full text-[13px] font-semibold leading-none transition-all duration-300 active:scale-[0.98]",
-    showArrow ? "gap-2 py-1.5 pl-4 pr-1.5" : "gap-2 px-5 py-2.5",
+    "group inline-flex w-fit max-w-full items-center justify-center rounded-full text-[12px] font-semibold leading-none transition-all duration-300 active:scale-[0.98] sm:text-[13px]",
+    showArrow
+      ? "gap-1.5 py-1 pl-3.5 pr-1 sm:gap-2 sm:py-1.5 sm:pl-4 sm:pr-1.5"
+      : "gap-2 px-4 py-2 sm:px-5 sm:py-2.5",
     variants[variant],
     fullWidth ? "!w-full" : "",
     className,
@@ -52,9 +54,9 @@ export default function CtaButton({
       <span className="whitespace-nowrap">{children}</span>
       {showArrow && (
         <span
-          className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full transition-all duration-300 group-hover:translate-x-0.5 ${arrowVariants[variant]}`}
+          className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full transition-all duration-300 group-hover:translate-x-0.5 sm:h-7 sm:w-7 ${arrowVariants[variant]}`}
         >
-          <HiArrowRight className="h-3.5 w-3.5" />
+          <HiArrowRight className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
         </span>
       )}
     </>

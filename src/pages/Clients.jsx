@@ -43,7 +43,7 @@ export default function Clients() {
             <p className="mx-auto mt-5 max-w-lg text-[0.95rem] leading-relaxed text-mota-mist sm:mt-6 sm:text-base">
               Organisations across India that rely on Mota for their uniform programs.
             </p>
-            <div className="mt-7 flex flex-wrap items-center justify-center gap-3 sm:mt-8">
+            <div className="mt-7 flex flex-wrap items-center justify-center gap-2.5 sm:mt-8 sm:gap-3">
               <CtaButton to="/contact" variant="accent">
                 Get in Touch
               </CtaButton>

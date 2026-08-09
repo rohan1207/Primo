@@ -68,7 +68,7 @@ body {
 }
 
 .mota-eyebrow-pill {
-  @apply inline-flex rounded-full px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.16em];
+  @apply inline-flex rounded-full px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.16em] sm:px-4 sm:py-1.5 sm:text-[11px];
   color: #086dbe;
   background-color: rgba(8, 109, 190, 0.12);
 }

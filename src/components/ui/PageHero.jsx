@@ -93,6 +93,7 @@ export function ProductCard({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ delay: (index % 3) * 0.08 }}
+      className="h-full"
       data-reveal
     >
       <div className="group card-hover relative flex h-full flex-col overflow-hidden rounded-3xl border border-mota-line bg-white shadow-soft">
@@ -114,15 +115,14 @@ export function ProductCard({
             {String(index + 1).padStart(2, "0")}
           </span>
         </div>
-        <div className="flex flex-1 flex-col p-4 sm:p-6">
-          <h3 className="mota-title-card text-lg transition-colors group-hover:text-[#086dbe] sm:text-2xl">{title}</h3>
+        <div className="flex flex-1 flex-col p-3.5 sm:p-6">
+          <h3 className="mota-title-card text-[0.95rem] leading-snug transition-colors group-hover:text-[#086dbe] sm:text-2xl">
+            {title}
+          </h3>
           <p className="mota-body mt-1.5 line-clamp-2 hidden text-sm sm:mt-2 sm:block">{description}</p>
-          <QuoteCta
-            subject={title}
-            href={href}
-            external={external}
-            className="mt-3 self-start sm:mt-4"
-          />
+          <div className="mt-auto pt-3 sm:pt-4">
+            <QuoteCta subject={title} href={href} external={external} />
+          </div>
         </div>
       </div>
     </motion.div>

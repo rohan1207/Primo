@@ -60,7 +60,7 @@ export default function CTABanner({
             >
               {description}
             </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
+            <div className="mt-8 flex flex-wrap items-center gap-2.5 sm:gap-4">
               {isExternal ? (
                 <CtaButton href={primaryTo} variant={isLight ? "accent" : "white"}>
                   {primaryLabel}

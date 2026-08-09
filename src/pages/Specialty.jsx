@@ -84,12 +84,12 @@ export default function Specialty() {
               Where a uniform has to do more than look good. Protective, hygienic and
               compliant apparel, manufactured in-house at our Baramati facility.
             </p>
-            <div className="mt-7 flex flex-wrap items-center gap-3 sm:mt-8">
+            <div className="mt-7 flex flex-wrap items-center gap-2.5 sm:mt-8 sm:gap-3">
               <CtaButton to="/contact" variant="accent">
-                Discuss Your Needs
+                Get a Quote
               </CtaButton>
               <CtaButton to="/infrastructure" variant="outline">
-                View Facility
+                Our Facility
               </CtaButton>
             </div>
           </motion.div>
@@ -147,7 +147,7 @@ export default function Specialty() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.2 }}
                   transition={{ delay: (i % 4) * 0.05, duration: 0.5 }}
-                  className="group relative overflow-hidden rounded-[1.25rem] border border-mota-line bg-white/90 p-4 shadow-soft transition-all duration-300 hover:-translate-y-1 hover:border-[#086dbe]/25 hover:shadow-float sm:rounded-[1.5rem] sm:p-6"
+                  className="group relative flex h-full flex-col overflow-hidden rounded-[1.25rem] border border-mota-line bg-white/90 p-4 shadow-soft transition-all duration-300 hover:-translate-y-1 hover:border-[#086dbe]/25 hover:shadow-float sm:rounded-[1.5rem] sm:p-6"
                   data-reveal
                 >
                   <div className="pointer-events-none absolute -right-6 -top-6 h-20 w-20 rounded-full bg-[#086dbe]/[0.07] transition-transform duration-500 group-hover:scale-150" />
@@ -161,13 +161,14 @@ export default function Specialty() {
                   <p className="relative mt-2 text-sm leading-relaxed text-mota-mist">
                     {cat.description}
                   </p>
-                  <QuoteCta
-                    subject={cat.title}
-                    href={cat.href}
-                    external={cat.external}
-                    variant="link"
-                    className="relative mt-3"
-                  />
+                  <div className="relative mt-auto pt-3">
+                    <QuoteCta
+                      subject={cat.title}
+                      href={cat.href}
+                      external={cat.external}
+                      variant="link"
+                    />
+                  </div>
                 </motion.article>
               );
             })}
@@ -287,9 +288,9 @@ export default function Specialty() {
           </>
         }
         description="From cleanrooms to construction sites, tell us your environment and we'll deliver the right solution."
-        primaryLabel="Discuss Your Needs"
+        primaryLabel="Get a Quote"
         primaryTo="/contact"
-        secondaryLabel="View Infrastructure"
+        secondaryLabel="Our Facility"
         secondaryTo="/infrastructure"
       />
     </>

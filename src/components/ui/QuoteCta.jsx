@@ -43,7 +43,7 @@ export default function QuoteCta({
     );
   }
 
-  const linkClasses = `group/cta inline-flex items-center gap-1.5 text-[13px] font-semibold text-[#086dbe] transition-colors duration-300 hover:text-mota-blue ${className}`;
+  const linkClasses = `group/cta inline-flex items-center gap-1.5 text-[12px] font-semibold text-[#086dbe] transition-colors duration-300 hover:text-mota-blue sm:text-[13px] ${className}`;
   const Icon = external ? HiOutlineExternalLink : HiArrowRight;
   const icon = (
     <Icon className="h-3.5 w-3.5 transition-transform duration-300 group-hover/cta:translate-x-0.5" />
