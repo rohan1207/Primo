@@ -16,11 +16,11 @@ export default function Home() {
     <>
       <NewHero />
       <DomainSplit />
+      <ProductsPreview />
       <HomeAbout />
       <Strengths />
       <TrustedPartnerships />
       <GridMotionSection />
-      <ProductsPreview />
       <EnquirySection />
       <CTABanner
         eyebrow="Start your order"
