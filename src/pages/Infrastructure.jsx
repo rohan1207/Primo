@@ -27,7 +27,7 @@ const STATS = [
 
 /** Used until dedicated factory photography is added to /public/factory */
 const STAGE_FALLBACKS = {
-  fabric: "/img1.jpeg",
+  fabric: "/img1.png",
   cutting: "/industrial_uniform.png",
   stitching: "/corporate_uniforms.png",
   branding: "/college_uniforms.png",

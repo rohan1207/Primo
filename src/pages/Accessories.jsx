@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useScrollReveal } from "../hooks/useAnimations";
 import CtaButton from "../components/ui/CtaButton";
 import CTABanner from "../components/ui/CTABanner";
+import QuoteCta from "../components/ui/QuoteCta";
 import { accessories } from "../data/content";
 
 const BENEFITS = [
@@ -71,7 +72,7 @@ export default function AccessoriesPage() {
             </div>
             <div className="absolute -bottom-4 -left-3 hidden overflow-hidden rounded-2xl border border-white/50 shadow-float sm:block sm:-bottom-5 sm:-left-5 sm:w-[42%]">
               <img
-                src="/img1.jpeg"
+                src="/img1.png"
                 alt="Premium trims and detailing"
                 className="aspect-[4/3] w-full object-cover"
               />
@@ -115,6 +116,7 @@ export default function AccessoriesPage() {
                   {item}
                 </p>
                 <div className="relative mt-3 h-0.5 w-8 rounded-full bg-[#086dbe] transition-all duration-500 group-hover:w-14" />
+                <QuoteCta subject={item} variant="link" className="relative mt-3" />
               </motion.div>
             ))}
           </div>

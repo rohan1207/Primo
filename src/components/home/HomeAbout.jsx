@@ -50,7 +50,7 @@ export default function HomeAbout() {
             <div className="relative min-h-[220px] p-4 sm:min-h-[260px] sm:p-5 lg:min-h-0 lg:p-6">
               <div className="h-full overflow-hidden rounded-[1.25rem] sm:rounded-[1.5rem]">
                 <img
-                  src="/img1.jpeg"
+                  src="/img1.png"
                   alt="Mota Group manufacturing and team"
                   className="h-full w-full object-cover transition-transform duration-[1.1s] ease-out hover:scale-[1.04]"
                   loading="lazy"

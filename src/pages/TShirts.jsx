@@ -3,6 +3,7 @@ import { useScrollReveal } from "../hooks/useAnimations";
 import CtaButton from "../components/ui/CtaButton";
 import CTABanner from "../components/ui/CTABanner";
 import ImageWithFallback from "../components/ui/ImageWithFallback";
+import QuoteCta from "../components/ui/QuoteCta";
 import { tshirtTypes, printMethods } from "../data/content";
 
 /** Used until the dedicated /tshirts photography is added to /public */
@@ -12,7 +13,7 @@ const FALLBACKS = [
   "/school_uniform.png",
   "/hotel_uniform.png",
   "/industrial_uniform.png",
-  "/img1.jpeg",
+  "/img1.png",
 ];
 
 export default function TShirts() {
@@ -133,6 +134,9 @@ export default function TShirts() {
                     <span className="font-semibold text-mota-ink">Best for: </span>
                     {type.bestFor}
                   </p>
+                  <div className="pt-3 sm:pt-4">
+                    <QuoteCta subject={`T-Shirts, ${type.title}`} />
+                  </div>
                 </div>
               </motion.article>
             ))}
@@ -178,6 +182,11 @@ export default function TShirts() {
                 <p className="relative mt-2 text-sm leading-relaxed text-mota-mist">
                   {method.text}
                 </p>
+                <QuoteCta
+                  subject={`Branding, ${method.title}`}
+                  variant="link"
+                  className="relative mt-3"
+                />
               </motion.div>
             ))}
           </div>

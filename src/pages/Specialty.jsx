@@ -15,10 +15,13 @@ import {
   HiOutlineCheckCircle,
   HiOutlineClipboardCheck,
   HiOutlineAdjustments,
+  HiOutlineHome,
+  HiOutlineStar,
 } from "react-icons/hi";
 import { useScrollReveal } from "../hooks/useAnimations";
 import CtaButton from "../components/ui/CtaButton";
 import CTABanner from "../components/ui/CTABanner";
+import QuoteCta from "../components/ui/QuoteCta";
 import { specialtyCategories, pharmaProducts } from "../data/content";
 
 const industryIcons = {
@@ -34,6 +37,8 @@ const industryIcons = {
   hospitality: HiOutlineSparkles,
   education: HiOutlineAcademicCap,
   corporate: HiOutlineOfficeBuilding,
+  housekeeping: HiOutlineHome,
+  sports: HiOutlineStar,
 };
 
 const COMPLIANCE = [
@@ -127,7 +132,7 @@ export default function Specialty() {
               <span className="text-[#086dbe]">Covered</span>
             </h2>
             <p className="mx-auto mt-4 max-w-lg text-[0.95rem] leading-relaxed text-mota-mist sm:text-base">
-              Twelve industries, each with its own safety, hygiene and branding
+              Fourteen industries, each with its own safety, hygiene and branding
               requirements, all handled under one roof.
             </p>
           </div>
@@ -156,6 +161,13 @@ export default function Specialty() {
                   <p className="relative mt-2 text-sm leading-relaxed text-mota-mist">
                     {cat.description}
                   </p>
+                  <QuoteCta
+                    subject={cat.title}
+                    href={cat.href}
+                    external={cat.external}
+                    variant="link"
+                    className="relative mt-3"
+                  />
                 </motion.article>
               );
             })}

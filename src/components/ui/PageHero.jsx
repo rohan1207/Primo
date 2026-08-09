@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import { HiOutlineArrowRight } from "react-icons/hi";
-import { Link } from "react-router-dom";
+import ImageWithFallback from "./ImageWithFallback";
+import QuoteCta from "./QuoteCta";
 
 export default function PageHero({ eyebrow, title, subtitle, children, image }) {
   return (
@@ -83,45 +83,48 @@ export function ProductCard({
   index = 0,
   gradient,
   image,
-  to = "/uniforms",
+  fallback,
+  href,
+  external = false,
 }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ delay: index * 0.08 }}
+      transition={{ delay: (index % 3) * 0.08 }}
       data-reveal
     >
-      <Link to={to} className="group block">
-        <div className="card-hover relative overflow-hidden rounded-3xl border border-mota-line bg-white shadow-soft">
-          <div
-            className={`relative aspect-[4/5] overflow-hidden ${
-              image ? "" : `bg-gradient-to-br ${gradient}`
-            }`}
-          >
-            {image ? (
-              <img
-                src={image}
-                alt={title}
-                className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                loading="lazy"
-              />
-            ) : null}
-            <div className="absolute inset-0 bg-gradient-to-t from-mota-blue/55 via-mota-blue/10 to-transparent" />
-            <span className="absolute left-4 top-4 hidden rounded-full bg-mota-blue px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.15em] text-white sm:inline-block">
-              0{index + 1}
-            </span>
-          </div>
-          <div className="p-4 sm:p-6">
-            <h3 className="mota-title-card text-lg transition-colors group-hover:text-[#086dbe] sm:text-2xl">{title}</h3>
-            <p className="mota-body mt-1.5 line-clamp-2 hidden text-sm sm:mt-2 sm:block">{description}</p>
-            <span className="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-[#086dbe] opacity-100 transition-all duration-300 sm:mt-4 sm:opacity-0 sm:group-hover:opacity-100">
-              Explore <HiOutlineArrowRight />
-            </span>
-          </div>
+      <div className="group card-hover relative flex h-full flex-col overflow-hidden rounded-3xl border border-mota-line bg-white shadow-soft">
+        <div
+          className={`relative aspect-[4/5] overflow-hidden ${
+            image ? "" : `bg-gradient-to-br ${gradient}`
+          }`}
+        >
+          {image ? (
+            <ImageWithFallback
+              src={image}
+              fallback={fallback}
+              alt={title}
+              className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+          ) : null}
+          <div className="absolute inset-0 bg-gradient-to-t from-mota-blue/55 via-mota-blue/10 to-transparent" />
+          <span className="absolute left-4 top-4 hidden rounded-full bg-mota-blue px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.15em] text-white sm:inline-block">
+            {String(index + 1).padStart(2, "0")}
+          </span>
         </div>
-      </Link>
+        <div className="flex flex-1 flex-col p-4 sm:p-6">
+          <h3 className="mota-title-card text-lg transition-colors group-hover:text-[#086dbe] sm:text-2xl">{title}</h3>
+          <p className="mota-body mt-1.5 line-clamp-2 hidden text-sm sm:mt-2 sm:block">{description}</p>
+          <QuoteCta
+            subject={title}
+            href={href}
+            external={external}
+            className="mt-3 self-start sm:mt-4"
+          />
+        </div>
+      </div>
     </motion.div>
   );
 }

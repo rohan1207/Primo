@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
 import {
   HiOutlineAcademicCap,
@@ -8,7 +7,7 @@ import {
 } from "react-icons/hi";
 import { domains } from "../../data/content";
 import CtaButton from "../ui/CtaButton";
-import QuoteModal from "../ui/QuoteModal";
+import { useQuote } from "../../context/QuoteContext";
 
 const icons = {
   school: HiOutlineAcademicCap,
@@ -17,7 +16,7 @@ const icons = {
 };
 
 export default function DomainSplit() {
-  const [quoteSubject, setQuoteSubject] = useState(null);
+  const { openQuote } = useQuote();
 
   return (
     <section className="relative overflow-hidden bg-mota-cream">
@@ -113,7 +112,7 @@ export default function DomainSplit() {
               ) : (
                 <button
                   type="button"
-                  onClick={() => setQuoteSubject(domain.title)}
+                  onClick={() => openQuote(domain.title)}
                   aria-label={`Get a quote for ${domain.title}`}
                   className="absolute inset-0 z-20 rounded-[1.75rem] outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-mota-blue"
                 />
@@ -122,12 +121,6 @@ export default function DomainSplit() {
           );
         })}
       </div>
-
-      <QuoteModal
-        open={Boolean(quoteSubject)}
-        subject={quoteSubject}
-        onClose={() => setQuoteSubject(null)}
-      />
     </section>
   );
 }

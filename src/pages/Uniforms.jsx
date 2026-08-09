@@ -1,19 +1,39 @@
 import { motion } from "framer-motion";
+import {
+  HiOutlineOfficeBuilding,
+  HiOutlineHeart,
+  HiOutlinePlus,
+  HiOutlineBeaker,
+  HiOutlineCog,
+  HiOutlineShieldCheck,
+  HiOutlineSparkles,
+  HiOutlineHome,
+  HiOutlineStar,
+  HiOutlineAcademicCap,
+  HiOutlineBookOpen,
+  HiOutlineTruck,
+} from "react-icons/hi";
 import { useScrollReveal } from "../hooks/useAnimations";
 import CtaButton from "../components/ui/CtaButton";
 import CTABanner from "../components/ui/CTABanner";
+import ImageWithFallback from "../components/ui/ImageWithFallback";
+import QuoteCta from "../components/ui/QuoteCta";
 import { uniformCategories } from "../data/content";
 
-const CATEGORY_IMAGES = [
-  "/corporate_uniforms.png",
-  "/college_uniforms.png",
-  "/school_uniform.png",
-  "/security_uniform.png",
-  "/industrial_uniform.png",
-  "/hospital_uniform.png",
-  "/hotel_uniform.png",
-  "/Autombile_Uniform.png",
-];
+const CATEGORY_ICONS = {
+  corporate: HiOutlineOfficeBuilding,
+  hospital: HiOutlinePlus,
+  nurse: HiOutlineHeart,
+  laboratory: HiOutlineBeaker,
+  industrial: HiOutlineCog,
+  security: HiOutlineShieldCheck,
+  hotel: HiOutlineSparkles,
+  housekeeping: HiOutlineHome,
+  sports: HiOutlineStar,
+  school: HiOutlineAcademicCap,
+  college: HiOutlineBookOpen,
+  automobile: HiOutlineTruck,
+};
 
 const PROCESS = [
   {
@@ -33,7 +53,7 @@ const PROCESS = [
 const STATS = [
   { value: "25+", label: "Years" },
   { value: "800+", label: "Garments / Day" },
-  { value: "8+", label: "Sectors" },
+  { value: "12+", label: "Sectors" },
 ];
 
 export default function Uniforms() {
@@ -110,47 +130,83 @@ export default function Uniforms() {
             </h2>
             <p className="mx-auto mt-4 max-w-lg text-[0.95rem] leading-relaxed text-mota-mist sm:text-base">
               Precision-tailored programs for education, corporate, healthcare, hospitality
-              and industry.
+              and industry, with the full garment range listed for each sector.
             </p>
           </div>
 
-          <div className="mt-10 grid grid-cols-2 gap-3 sm:mt-12 sm:gap-5 lg:gap-6">
-            {uniformCategories.map((cat, i) => (
-              <motion.article
-                key={cat.title}
-                initial={{ opacity: 0, y: 28 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.2 }}
-                transition={{ delay: (i % 2) * 0.08, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-                className="group relative min-h-[230px] overflow-hidden rounded-2xl sm:min-h-[360px] sm:rounded-[1.75rem]"
-                data-reveal
-              >
-                <img
-                  src={CATEGORY_IMAGES[i % CATEGORY_IMAGES.length]}
-                  alt={cat.title}
-                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1.1s] ease-out group-hover:scale-[1.05]"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-mota-blue via-mota-blue/55 to-mota-blue/10" />
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(8,109,190,0.3),transparent_55%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+          <div className="mt-10 grid gap-4 sm:mt-12 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3 lg:gap-6">
+            {uniformCategories.map((cat, i) => {
+              const Icon = CATEGORY_ICONS[cat.icon];
 
-                <span className="absolute left-4 top-4 font-sans text-3xl font-bold leading-none text-white/25 sm:left-6 sm:top-6 sm:text-5xl">
-                  0{i + 1}
-                </span>
+              return (
+                <motion.article
+                  key={cat.title}
+                  initial={{ opacity: 0, y: 28 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.15 }}
+                  transition={{
+                    delay: (i % 3) * 0.08,
+                    duration: 0.6,
+                    ease: [0.22, 1, 0.36, 1],
+                  }}
+                  className="group flex flex-col overflow-hidden rounded-2xl border border-mota-line bg-white shadow-soft transition-all duration-300 hover:-translate-y-1 hover:border-[#086dbe]/25 hover:shadow-float sm:rounded-[1.75rem]"
+                  data-reveal
+                >
+                  <div className="relative aspect-[16/10] overflow-hidden">
+                    <ImageWithFallback
+                      src={cat.image}
+                      fallback={cat.fallback}
+                      alt={cat.title}
+                      className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1.1s] ease-out group-hover:scale-[1.05]"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-mota-blue via-mota-blue/45 to-mota-blue/5" />
 
-                <div className="absolute inset-x-0 bottom-0 p-4 sm:p-7">
-                  <h3 className="font-sans text-base font-bold tracking-[-0.02em] text-white sm:text-2xl">
-                    {cat.title}
-                  </h3>
-                  <div className="mt-2.5 h-0.5 w-8 rounded-full bg-[#086dbe] transition-all duration-500 group-hover:w-16 sm:mt-3 sm:w-10" />
-                  <p className="mt-3 hidden line-clamp-3 text-sm leading-relaxed text-white/75 sm:block">
-                    {cat.description}
-                  </p>
-                </div>
+                    {Icon && (
+                      <span className="absolute right-3 top-3 flex h-9 w-9 items-center justify-center rounded-xl border border-white/20 bg-white/15 text-white backdrop-blur-sm sm:right-4 sm:top-4">
+                        <Icon className="h-4 w-4" />
+                      </span>
+                    )}
 
-                <div className="pointer-events-none absolute inset-0 rounded-2xl ring-1 ring-inset ring-white/10 sm:rounded-[1.75rem]" />
-              </motion.article>
-            ))}
+                    <span className="absolute left-3 top-3 font-sans text-2xl font-bold leading-none text-white/30 sm:left-5 sm:top-4 sm:text-3xl">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+
+                    <div className="absolute inset-x-0 bottom-0 p-3 sm:p-5">
+                      <h3 className="font-sans text-base font-bold tracking-[-0.02em] text-white sm:text-xl">
+                        {cat.title}
+                      </h3>
+                      <div className="mt-2 h-0.5 w-8 rounded-full bg-[#086dbe] transition-all duration-500 group-hover:w-16 sm:w-10" />
+                    </div>
+                  </div>
+
+                  <div className="flex flex-1 flex-col p-4 sm:p-5">
+                    <p className="hidden text-sm leading-relaxed text-mota-mist sm:block">
+                      {cat.description}
+                    </p>
+
+                    <ul className="grid grid-cols-2 gap-x-3 gap-y-1.5 sm:mt-4 sm:gap-y-2">
+                      {cat.items.map((item) => (
+                        <li
+                          key={item}
+                          className="flex items-start gap-1.5 text-[12px] leading-snug text-mota-mist sm:text-[13px]"
+                        >
+                          <span className="mt-[0.45rem] h-1 w-1 shrink-0 rounded-full bg-[#086dbe]" />
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+
+                    <div className="mt-auto pt-4 sm:pt-5">
+                      <QuoteCta
+                        subject={cat.title}
+                        href={cat.href}
+                        external={cat.external}
+                      />
+                    </div>
+                  </div>
+                </motion.article>
+              );
+            })}
           </div>
         </div>
       </section>

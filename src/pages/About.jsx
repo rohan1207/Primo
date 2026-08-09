@@ -360,7 +360,7 @@ export default function About() {
               className={`relative min-h-[300px] sm:min-h-[360px] lg:min-h-0 ${imageFrame}`}
             >
               <img
-                src="/img1.jpeg"
+                src="/img1.png"
                 alt="Mota manufacturing facility"
                 className="absolute inset-0 h-full w-full object-cover"
                 loading="lazy"

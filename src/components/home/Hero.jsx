@@ -41,7 +41,7 @@ export default function Hero() {
       {/* Atmospheric hero image */}
       <motion.div style={{ y, opacity }} className="absolute inset-0">
         <img
-          src="/img1.jpeg"
+          src="/img1.png"
           alt=""
           className="hero-bg-image absolute inset-0 h-full w-full object-cover"
           aria-hidden="true"

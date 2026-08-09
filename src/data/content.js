@@ -69,20 +69,12 @@ export const strengths = [
 
 export const products = [
   {
-    title: "School Uniforms",
-    slug: "school",
+    title: "Corporate Uniforms",
+    slug: "corporate",
     description:
-      "Identity, pride, and community, crafted for educational institutions of every scale.",
-    gradient: "from-blue-100 to-slate-50",
-    image: "/school_uniform.png",
-  },
-  {
-    title: "College Uniforms",
-    slug: "college",
-    description:
-      "Patterns that compliment your brand identity, designed with meticulous attention to guidelines.",
-    gradient: "from-indigo-100 to-blue-50",
-    image: "/college_uniforms.png",
+      "End-to-end service from design to delivery, managing supply and wearer coordination.",
+    gradient: "from-slate-100 to-stone-50",
+    image: "/corporate_uniforms.png",
   },
   {
     title: "Hospital Uniforms",
@@ -93,12 +85,20 @@ export const products = [
     image: "/hospital_uniform.png",
   },
   {
-    title: "Corporate Uniforms",
-    slug: "corporate",
+    title: "Nurse Uniforms",
+    slug: "nurse",
     description:
-      "End-to-end service from design to delivery, managing supply and wearer coordination.",
-    gradient: "from-slate-100 to-stone-50",
-    image: "/corporate_uniforms.png",
+      "Easy-care nursing wear with the movement and modesty a full ward shift demands.",
+    gradient: "from-sky-100 to-slate-50",
+    image: "/nurse.png",
+  },
+  {
+    title: "Laboratory Uniforms",
+    slug: "laboratory",
+    description:
+      "Protective apparel for laboratories, cleanrooms and controlled environments.",
+    gradient: "from-cyan-100 to-slate-50",
+    image: "/lab.png",
   },
   {
     title: "Industrial Uniforms",
@@ -116,6 +116,58 @@ export const products = [
     gradient: "from-gray-100 to-slate-50",
     image: "/security_uniform.png",
   },
+  {
+    title: "Hotel Staff Uniforms",
+    slug: "hotel",
+    description:
+      "Front-of-house and kitchen uniforms that set the tone for every guest interaction.",
+    gradient: "from-stone-100 to-amber-50",
+    image: "/hotel_uniform.png",
+  },
+  {
+    title: "House-keeping Uniforms",
+    slug: "housekeeping",
+    description:
+      "Practical, hard-wearing kits for housekeeping and facility management teams.",
+    gradient: "from-teal-100 to-slate-50",
+    image: "/housekeeping.jpg",
+  },
+  {
+    title: "Sports Wear Uniforms",
+    slug: "sports",
+    description:
+      "Sublimated team kits and training wear in moisture-wicking performance fabrics.",
+    gradient: "from-blue-100 to-indigo-50",
+    image: "/sports.png",
+  },
+  {
+    title: "School Uniforms",
+    slug: "school",
+    description:
+      "Identity, pride, and community, crafted for educational institutions of every scale.",
+    gradient: "from-blue-100 to-slate-50",
+    image: "/school_uniform.png",
+    href: "https://theuniformlab.in/",
+    external: true,
+  },
+  {
+    title: "College Uniforms",
+    slug: "college",
+    description:
+      "Patterns that compliment your brand identity, designed with meticulous attention to guidelines.",
+    gradient: "from-indigo-100 to-blue-50",
+    image: "/college_uniforms.png",
+    href: "https://theuniformlab.in/",
+    external: true,
+  },
+  {
+    title: "Automobile Uniforms",
+    slug: "automobile",
+    description:
+      "Workshop and service-bay uniforms for dealerships, built for oil, grease and daily wear.",
+    gradient: "from-zinc-100 to-slate-50",
+    image: "/Autombile_Uniform.png",
+  },
 ];
 
 /** Local public assets used across the home experience */
@@ -128,55 +180,195 @@ export const publicGallery = [
   "/security_uniform.png",
   "/Autombile_Uniform.png",
   "/hotel_uniform.png",
-  "/img1.jpeg",
+  "/img1.png",
 ];
 
 export const uniformCategories = [
   {
-    title: "Corporate Uniform",
+    title: "Corporate Uniforms",
+    icon: "corporate",
+    image: "/corporate_uniforms.png",
     description:
-      "Mota Uniforms offer complete service solution where we take care of everything from design to order delivery. We manage your supply uniforms & handle contact with uniform wearers.",
-  },
-  {
-    title: "College Uniform",
-    description:
-      "The critical thing in uniform is to get the pattern that compliments your brand identity. Our in-house designers take the extra effort to study brand guidelines and incorporate design elements.",
-  },
-  {
-    title: "School Uniforms",
-    description:
-      "A uniform offers your school public identity embraced by your community and enhances the personal pride of each student, equally for sports and general uniforms.",
-  },
-  {
-    title: "Security Uniforms",
-    description:
-      "Our in-house designers study brand guidelines and incorporate design elements. This not only adds to brand value, for the wearer it becomes a matter of pride.",
-  },
-  {
-    title: "Industrial Uniforms",
-    description:
-      "Complete service solution from design to order & delivery. We manage your supply uniforms & handle contact with uniform wearers.",
+      "Complete service solution where we take care of everything from design to order delivery, including contact with the uniform wearers.",
+    items: [
+      "Formal Shirt",
+      "Formal Trouser",
+      "Corporate Blazer",
+      "Pencil Skirt",
+      "Waistcoat",
+      "Tie & Scarf",
+    ],
   },
   {
     title: "Hospital Uniforms",
+    icon: "hospital",
+    image: "/hospital_uniform.png",
     description:
-      "Pioneering one-stop uniform solutions. Constantly exploring new possibilities and upgrading technology to expand our horizon.",
+      "Pioneering one-stop uniform solutions for hospitals, with fabrics chosen for repeated hot washes and long shifts.",
+    items: [
+      "Doctor Apron",
+      "Doctor Coat",
+      "OT Uniform",
+      "Ward Boy Uniform",
+      "Patient Gown",
+      "Surgical Scrubs",
+    ],
   },
   {
-    title: "Hospitality Uniforms",
+    title: "Nurse Uniforms",
+    icon: "nurse",
+    image: "/nurse.png",
     description:
-      "Long-term relationships built on integrity and dedication to excellence, highest-quality products from premium materials at competitive prices.",
+      "Easy-care nursing wear with the movement and modesty that a full ward shift demands.",
+    items: [
+      "Nurse Tunic",
+      "Nurse Scrubs",
+      "Scrub Pants",
+      "Nurse Apron",
+      "Nursing Coat",
+      "Nursing Cap",
+    ],
   },
   {
-    title: "Automobile Uniform",
+    title: "Laboratory Uniforms",
+    icon: "laboratory",
+    image: "/lab.png",
     description:
-      "Clients prefer us for manufacturing and exporting an excellent collection of automobile industry uniforms with broad consignment capabilities.",
+      "Protective apparel for laboratories, cleanrooms and controlled environments.",
+    items: [
+      "Laboratory Coat, Men & Women",
+      "Scrub Suit",
+      "Protective Apron",
+      "Lab Cap",
+      "Safety Gown",
+    ],
+  },
+  {
+    title: "Industrial Uniforms",
+    icon: "industrial",
+    image: "/industrial_uniform.png",
+    description:
+      "Durable, functional workwear engineered for demanding plant and site conditions.",
+    items: [
+      "Boiler Suits & Coveralls",
+      "Two-piece Workwear Sets",
+      "High-visibility Uniforms",
+      "Reflective Jackets",
+      "Cargo Pants",
+    ],
+  },
+  {
+    title: "Security Uniforms",
+    icon: "security",
+    image: "/security_uniform.png",
+    description:
+      "Authority and pride in every stitch, with durable trims and badging that carry your brand.",
+    items: [
+      "Security Shirt",
+      "Security Trouser",
+      "Security Cap",
+      "Reflective Jacket",
+      "Belt & Badge",
+    ],
+  },
+  {
+    title: "Hotel Staff Uniforms",
+    icon: "hotel",
+    image: "/hotel_uniform.png",
+    description:
+      "Front-of-house and kitchen uniforms that set the tone for every guest interaction.",
+    items: [
+      "Chef Coat",
+      "Chef's Cap",
+      "Apron",
+      "Waiter Uniform",
+      "Receptionist Suit",
+    ],
+  },
+  {
+    title: "House-keeping Uniforms",
+    icon: "housekeeping",
+    image: "/housekeeping.jpg",
+    description:
+      "Practical, hard-wearing kits for housekeeping and facility management teams.",
+    items: [
+      "Housekeeping Shirt",
+      "Housekeeping Tunic",
+      "Apron",
+      "Trouser",
+      "Utility Pouch",
+      "Cleaning Gloves",
+    ],
+  },
+  {
+    title: "Sports Wear Uniforms",
+    icon: "sports",
+    image: "/sports.png",
+    description:
+      "Sublimated team kits and training wear in moisture-wicking performance fabrics.",
+    items: [
+      "Sports T-Shirt",
+      "Sports Shorts",
+      "Track Pants",
+      "Jersey Set",
+      "Training Jacket",
+      "Team Tracksuit",
+    ],
+  },
+  {
+    title: "School Uniforms",
+    icon: "school",
+    image: "/school_uniform.png",
+    description:
+      "A uniform offers your school public identity embraced by your community and enhances the personal pride of each student.",
+    items: [
+      "Shirts & Blouses",
+      "Trousers & Pinafores",
+      "Blazers & Sweaters",
+      "House T-Shirts",
+      "Sports Kits",
+      "Ties, Belts & Socks",
+    ],
+    href: "https://theuniformlab.in/",
+    external: true,
+  },
+  {
+    title: "College Uniforms",
+    icon: "college",
+    image: "/college_uniforms.png",
+    description:
+      "Patterns that compliment your brand identity, with in-house designers studying your campus guidelines.",
+    items: [
+      "Formal Shirts",
+      "Trousers & Skirts",
+      "Blazers",
+      "Department T-Shirts",
+      "Lab Coats",
+      "ID Cards & Accessories",
+    ],
+    href: "https://theuniformlab.in/",
+    external: true,
+  },
+  {
+    title: "Automobile Uniforms",
+    icon: "automobile",
+    image: "/Autombile_Uniform.png",
+    description:
+      "Workshop and service-bay uniforms for dealerships and plants, built for oil, grease and daily wear.",
+    items: [
+      "Service Coveralls",
+      "Technician Shirts",
+      "Cargo Trousers",
+      "Reflective Vests",
+      "Work Aprons",
+      "Caps",
+    ],
   },
 ];
 
 export const specialtyCategories = [
   {
-    title: "Pharmaceutical",
+    title: "Pharmaceutical & Laboratory",
     icon: "pharma",
     description: "Cleanroom suits, lab coats and controlled-environment apparel.",
   },
@@ -198,7 +390,7 @@ export const specialtyCategories = [
   {
     title: "Hospitals & Healthcare",
     icon: "healthcare",
-    description: "Scrubs, doctor coats and staff wear built for long shifts.",
+    description: "Scrubs, nursing tunics and doctor coats built for long shifts.",
   },
   {
     title: "Security Services",
@@ -229,11 +421,23 @@ export const specialtyCategories = [
     title: "Education",
     icon: "education",
     description: "School, college and campus staff uniform programs.",
+    href: "https://theuniformlab.in/",
+    external: true,
   },
   {
     title: "Corporate Offices",
     icon: "corporate",
     description: "Formal shirts, blazers and branded workwear for teams.",
+  },
+  {
+    title: "Housekeeping & Facility",
+    icon: "housekeeping",
+    description: "Tunics, aprons and utility kits for facility management crews.",
+  },
+  {
+    title: "Sports & Athleisure",
+    icon: "sports",
+    description: "Sublimated team jerseys, tracksuits and training wear.",
   },
 ];
 
@@ -311,7 +515,7 @@ export const tshirtTypes = [
     description:
       "Moisture-wicking knit that dries fast and stays light during activity.",
     bestFor: "Marathons, sports days, gyms",
-    image: "/tshirts/dry-fit.jpg",
+    image: "/sports.png",
   },
   {
     title: "Hooded Tee",
@@ -521,11 +725,16 @@ export const offices = {
 };
 
 export const topProducts = [
-  "School Uniforms",
+  "Corporate Uniforms",
   "Hospital Uniforms",
-  "College Uniforms",
-  "Corporate Uniform",
+  "Nurse Uniforms",
+  "Laboratory Uniforms",
   "Industrial Uniforms",
+  "Security Uniforms",
+  "Hotel Staff Uniforms",
+  "House-keeping Uniforms",
+  "Sports Wear Uniforms",
+  "School Uniforms",
 ];
 
 export const quickLinks = [
@@ -546,7 +755,7 @@ export const fabricBrands = [
 
 export const aboutContent = {
   intro: `Mota Uniforms is a one stop solution for all your Uniforms needs. "Mota Uniforms" is a brand of Mota Garments. We are one of the leading manufacturers and suppliers of all kinds of uniforms.`,
-  experience: `With an experience of over 25 years in this field, we are the preferred vendor for providing customised Uniforms to Schools, Colleges, Hospitals, Pharmaceutical companies, Aviation, Security staff, Hospitality and Corporates.`,
+  experience: `With an experience of over 25 years in this field, we are the preferred vendor for providing customised Uniforms to Schools, Colleges, Hospitals and nursing staff, Laboratories, Pharmaceutical companies, Aviation, Security staff, Hotels and housekeeping teams, Sports teams, Automobile workshops, Industry and Corporates.`,
   facility: `We have a self contained state-of-art manufacturing facility setup in Baramati, Pune (India). This facility has a capacity to produce over 800 garments per day. Our unit has high end automated sewing machines of brands like Brother and Juki. With strict in-line quality checks in place, we ensure quality consistency throughout the consignment.`,
   fabrics: `We at Mota Garments are authorised distributors and stockist of reputed fabric brands like Raymond, Mafatlal, Valji's, Siyaram's, Gwalior Mills, etc.`,
   position: `Our association with different fabric manufacturers complimented with our own state-of-art manufacturing setup; We are in an excellent position to provide our clients all types of uniforms with superb quality in the given time frame.`,
@@ -569,7 +778,7 @@ export const aboutHighlights = [
   {
     title: "State-of-Art Facility",
     text: aboutContent.facility,
-    image: "/img1.jpeg",
+    image: "/img1.png",
   },
   {
     title: "Premium Fabric Partners",

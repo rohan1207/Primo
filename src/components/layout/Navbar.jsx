@@ -5,13 +5,13 @@ import { HiOutlineMenuAlt3, HiX } from "react-icons/hi";
 import { navLinks } from "../../data/content";
 import LogoMark from "../svg/LogoMark";
 import CtaButton from "../ui/CtaButton";
-import QuoteModal from "../ui/QuoteModal";
+import { useQuote } from "../../context/QuoteContext";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [quoteOpen, setQuoteOpen] = useState(false);
   const location = useLocation();
+  const { openQuote } = useQuote();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -23,14 +23,14 @@ export default function Navbar() {
     setMobileOpen(false);
   }, [location.pathname]);
 
-  // The quote modal locks scrolling too, so it has to be accounted for here,
-  // otherwise closing the drawer to open the modal would release the lock.
+  // The quote modal applies its own scroll lock after this effect runs, so the
+  // drawer closing to reveal the modal does not release it.
   useEffect(() => {
-    document.body.style.overflow = mobileOpen || quoteOpen ? "hidden" : "";
+    document.body.style.overflow = mobileOpen ? "hidden" : "";
     return () => {
       document.body.style.overflow = "";
     };
-  }, [mobileOpen, quoteOpen]);
+  }, [mobileOpen]);
 
   return (
     <>
@@ -75,7 +75,7 @@ export default function Navbar() {
 
           <CtaButton
             type="button"
-            onClick={() => setQuoteOpen(true)}
+            onClick={() => openQuote()}
             variant="white"
             className="hidden shadow-none hover:shadow-none lg:inline-flex"
           >
@@ -163,7 +163,7 @@ export default function Navbar() {
                 className="mt-8 shadow-none"
                 onClick={() => {
                   setMobileOpen(false);
-                  setQuoteOpen(true);
+                  openQuote();
                 }}
               >
                 Get a Quote
@@ -172,8 +172,6 @@ export default function Navbar() {
           </motion.div>
         )}
       </AnimatePresence>
-
-      <QuoteModal open={quoteOpen} onClose={() => setQuoteOpen(false)} />
     </>
   );
 }
