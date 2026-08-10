@@ -16,11 +16,12 @@ const CLIENT_LOGOS = [
   "/clients/png.png",
   "/clients/ub.png",
   "/clients/uni.png",
+  "/tata.png",
 ];
 
 const INNER_RING = CLIENT_LOGOS.slice(0, 4);
 const MIDDLE_RING = CLIENT_LOGOS.slice(4, 8);
-const OUTER_RING = CLIENT_LOGOS.slice(8, 13);
+const OUTER_RING = CLIENT_LOGOS.slice(8);
 
 function BrandCore() {
   return (

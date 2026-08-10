@@ -42,10 +42,9 @@ export default function DomainSplit() {
         </motion.div>
       </div>
 
-      <div className="relative z-10 mx-auto grid w-full max-w-7xl grid-cols-1 gap-4 px-5 pb-10 sm:gap-5 sm:px-8 sm:pb-12 lg:grid-cols-2 lg:gap-6 lg:pb-16">
+      <div className="relative z-10 mx-auto grid w-full max-w-7xl grid-cols-1 gap-3 px-5 pb-10 sm:grid-cols-2 sm:gap-4 sm:px-8 sm:pb-12 lg:grid-cols-3 lg:gap-5 lg:pb-16">
         {domains.map((domain, i) => {
           const DomainIcon = icons[domain.icon];
-          const isCentered = i === 2;
           const label = domain.ctaLabel || domain.cta.replace("Explore ", "");
 
           return (
@@ -54,10 +53,8 @@ export default function DomainSplit() {
               initial={{ opacity: 0, y: 28 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.25 }}
-              transition={{ delay: (i % 2) * 0.12, duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
-              className={`group relative flex min-h-[380px] cursor-pointer overflow-hidden rounded-[1.75rem] sm:min-h-[460px] lg:min-h-[520px] ${
-                isCentered ? "lg:col-span-2 lg:mx-auto lg:w-[calc(50%-0.75rem)]" : ""
-              }`}
+              transition={{ delay: (i % 3) * 0.1, duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
+              className="group relative flex min-h-[340px] cursor-pointer overflow-hidden rounded-[1.5rem] sm:min-h-[400px] lg:min-h-[440px] lg:rounded-[1.75rem]"
             >
               <img
                 src={domain.image}
@@ -69,28 +66,28 @@ export default function DomainSplit() {
               <div className="absolute inset-0 bg-gradient-to-t from-mota-blue via-mota-blue/55 to-mota-blue/10 transition-opacity duration-500 group-hover:from-mota-blue/95" />
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(8,109,190,0.35),transparent_55%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
-              <div className="absolute left-5 top-5 flex items-center gap-3 sm:left-6 sm:top-6">
-                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-white/15 text-white backdrop-blur-md transition-colors duration-300 group-hover:bg-[#086dbe] sm:h-12 sm:w-12">
-                  <DomainIcon className="h-5 w-5 sm:h-6 sm:w-6" />
+              <div className="absolute left-4 top-4 flex items-center gap-2.5 sm:left-5 sm:top-5">
+                <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-white/15 text-white backdrop-blur-md transition-colors duration-300 group-hover:bg-[#086dbe] sm:h-10 sm:w-10">
+                  <DomainIcon className="h-4 w-4 sm:h-5 sm:w-5" />
                 </div>
-                <span className="font-sans text-4xl font-bold leading-none text-white/25 transition-colors duration-300 group-hover:text-white/40 sm:text-5xl">
+                <span className="font-sans text-3xl font-bold leading-none text-white/25 transition-colors duration-300 group-hover:text-white/40 sm:text-4xl">
                   0{i + 1}
                 </span>
               </div>
 
-              <div className="absolute inset-x-0 bottom-0 flex flex-col p-5 sm:p-7 lg:p-8">
-                <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-white/70 sm:text-[11px]">
+              <div className="absolute inset-x-0 bottom-0 flex flex-col p-4 sm:p-5 lg:p-6">
+                <p className="text-[9px] font-semibold uppercase tracking-[0.14em] text-white/70 sm:text-[10px]">
                   {domain.subtitle}
                 </p>
-                <h3 className="mt-2 font-sans text-2xl font-bold tracking-[-0.02em] text-white sm:text-3xl lg:text-[2.05rem]">
+                <h3 className="mt-1.5 font-sans text-xl font-bold tracking-[-0.02em] text-white sm:text-2xl">
                   {domain.title}
                 </h3>
-                <div className="mt-3 h-0.5 w-10 rounded-full bg-[#086dbe] transition-all duration-500 group-hover:w-16" />
-                <p className="mt-3 max-w-md text-sm leading-relaxed text-white/75 sm:text-[0.95rem]">
+                <div className="mt-2.5 h-0.5 w-8 rounded-full bg-[#086dbe] transition-all duration-500 group-hover:w-14" />
+                <p className="mt-2.5 line-clamp-3 text-[13px] leading-relaxed text-white/75 sm:text-sm">
                   {domain.description}
                 </p>
 
-                <CtaButton static variant="white" className="mt-5 sm:mt-6">
+                <CtaButton static variant="white" className="mt-4 sm:mt-5">
                   <span className="inline-flex items-center gap-1.5">
                     {label}
                     {domain.external && <HiOutlineExternalLink className="h-3.5 w-3.5" />}
@@ -98,7 +95,7 @@ export default function DomainSplit() {
                 </CtaButton>
               </div>
 
-              <div className="pointer-events-none absolute inset-0 rounded-[1.75rem] ring-1 ring-inset ring-white/10 transition-colors duration-500 group-hover:ring-white/25" />
+              <div className="pointer-events-none absolute inset-0 rounded-[1.5rem] ring-1 ring-inset ring-white/10 transition-colors duration-500 group-hover:ring-white/25 lg:rounded-[1.75rem]" />
 
               {/* Whole card is the click target */}
               {domain.external ? (
@@ -107,14 +104,14 @@ export default function DomainSplit() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`${domain.title}, opens in a new tab`}
-                  className="absolute inset-0 z-20 rounded-[1.75rem] outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-mota-blue"
+                  className="absolute inset-0 z-20 rounded-[1.5rem] outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-mota-blue lg:rounded-[1.75rem]"
                 />
               ) : (
                 <button
                   type="button"
                   onClick={() => openQuote(domain.title)}
                   aria-label={`Get a quote for ${domain.title}`}
-                  className="absolute inset-0 z-20 rounded-[1.75rem] outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-mota-blue"
+                  className="absolute inset-0 z-20 rounded-[1.5rem] outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-mota-blue lg:rounded-[1.75rem]"
                 />
               )}
             </motion.article>

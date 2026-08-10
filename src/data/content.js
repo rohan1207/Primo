@@ -462,114 +462,123 @@ export const accessories = [
   "Aprons & Gloves",
 ];
 
+/**
+ * Promotional / casual apparel catalog (atom ESSENTIALS line).
+ * Product photos live in /public/tshirts.
+ */
 export const tshirtTypes = [
   {
-    title: "Round Neck",
-    fabric: "Cotton bio-wash",
-    gsm: "180 GSM",
+    name: "Elegance",
+    subtitle: "Classic Polo T-Shirt",
     description:
-      "The everyday branded tee. Soft handfeel, holds colour after repeated washes.",
-    bestFor: "Giveaways, staff casuals, campaigns",
-    image: "/tshirts/round-neck.jpg",
+      "A clean, structured polo with a soft handfeel. Built for daily corporate wear, events and branded team kits.",
+    image: "/tshirts/elegance.webp",
+    colors: [
+      { name: "Black", hex: "#1a1a1a" },
+      { name: "Navy Blue", hex: "#1e3a5f" },
+      { name: "Royal Blue", hex: "#1e5aa8" },
+      { name: "Red", hex: "#c41e3a" },
+      { name: "Maroon", hex: "#6b1e2a" },
+      { name: "Charcoal Grey", hex: "#4a4a4a" },
+      { name: "Beige", hex: "#c4a574" },
+    ],
   },
   {
-    title: "Polo / Collar",
-    fabric: "Cotton matty, pique",
-    gsm: "220 GSM",
+    name: "Prestige",
+    subtitle: "Contrast Tip Polo",
     description:
-      "Structured collar and placket that keeps a smart look through a full shift.",
-    bestFor: "Corporate teams, showrooms, front desk",
-    image: "/tshirts/polo.jpg",
+      "Premium pique polo with contrast tipping on the collar and cuff. A sharper look for front-of-house and leadership teams.",
+    image: "/tshirts/prestige.jpg",
+    colors: [
+      { name: "White", hex: "#f4f4f4" },
+      { name: "Light Grey", hex: "#c8c8c8" },
+      { name: "Beige", hex: "#c4a574" },
+      { name: "Red", hex: "#c41e3a" },
+      { name: "Navy Blue", hex: "#1e3a5f" },
+      { name: "Royal Blue", hex: "#1e5aa8" },
+    ],
   },
   {
-    title: "V-Neck",
-    fabric: "Cotton single jersey",
-    gsm: "180 GSM",
+    name: "Classic",
+    subtitle: "Plain Round Neck T-Shirt",
     description:
-      "A softer neckline that sits well under jackets and layered uniforms.",
-    bestFor: "Retail staff, casual workwear",
-    image: "/tshirts/v-neck.jpg",
+      "The everyday crew-neck tee. Soft cotton body that takes print and embroidery cleanly for campaigns and giveaways.",
+    image: "/tshirts/classic.webp",
+    colors: [
+      { name: "White", hex: "#f4f4f4" },
+      { name: "Black", hex: "#1a1a1a" },
+      { name: "Red", hex: "#c41e3a" },
+      { name: "Navy Blue", hex: "#1e3a5f" },
+      { name: "Sky Blue", hex: "#5dade2" },
+      { name: "Olive Green", hex: "#556b2f" },
+      { name: "Purple", hex: "#6b3fa0" },
+      { name: "Yellow", hex: "#e6b800" },
+    ],
   },
   {
-    title: "Henley Placket",
-    fabric: "Cotton slub",
-    gsm: "190 GSM",
+    name: "Comfort",
+    subtitle: "Lounger Hoodie Jacket",
     description:
-      "Buttoned placket without a collar, a premium finish for smart-casual kits.",
-    bestFor: "Cafes, boutique hospitality",
-    image: "/tshirts/henley.jpg",
+      "Zip-up hoodie with drawcord and kangaroo pocket. Ideal for staff merch, college kits and cooler-season branding.",
+    image: "/tshirts/comfort.webp",
+    colors: [
+      { name: "White", hex: "#f4f4f4" },
+      { name: "Black", hex: "#1a1a1a" },
+      { name: "Charcoal Grey", hex: "#5a5a5a" },
+      { name: "Royal Blue", hex: "#1e5aa8" },
+    ],
   },
   {
-    title: "Full Sleeve",
-    fabric: "Cotton bio-wash",
-    gsm: "180 GSM",
+    name: "Essential",
+    subtitle: "Premium Round Neck Polo",
     description:
-      "Full arm coverage for cooler months and outdoor field teams.",
-    bestFor: "Winter kits, field staff, logistics",
-    image: "/tshirts/full-sleeve.jpg",
+      "A refined polo cut with contrast collar detail. Premium finish for showrooms, dealerships and corporate casuals.",
+    image: "/tshirts/essential.webp",
+    colors: [
+      { name: "White", hex: "#f4f4f4" },
+      { name: "Black", hex: "#1a1a1a" },
+      { name: "Red", hex: "#c41e3a" },
+      { name: "Maroon", hex: "#6b1e2a" },
+      { name: "Navy Blue", hex: "#1e3a5f" },
+      { name: "Royal Blue", hex: "#1e5aa8" },
+      { name: "Beige", hex: "#c4a574" },
+      { name: "Light Grey", hex: "#c8c8c8" },
+    ],
   },
   {
-    title: "Dry-Fit Sports",
-    fabric: "Polyester micro, honeycomb",
-    gsm: "140 GSM",
+    name: "Evolve",
+    subtitle: "Fleece Jacket",
     description:
-      "Moisture-wicking knit that dries fast and stays light during activity.",
-    bestFor: "Marathons, sports days, gyms",
-    image: "/sports.png",
+      "Quilted fleece jacket for outdoor teams and winter programs. Layer-ready, branded and built to last a full season.",
+    image: "/tshirts/evolve.webp",
+    colors: [
+      { name: "Black", hex: "#1a1a1a" },
+      { name: "Charcoal Grey", hex: "#4a4a4a" },
+      { name: "Navy Blue", hex: "#1e3a5f" },
+    ],
+  },
+];
+
+export const tshirtReasons = [
+  {
+    title: "Premium Quality Fabrics",
+    text: "Soft, durable knits chosen to hold colour, print and embroidery wash after wash.",
   },
   {
-    title: "Hooded Tee",
-    fabric: "Cotton terry, fleece",
-    gsm: "240 GSM",
-    description:
-      "Hood and kangaroo pocket, a favourite for merchandise and college drops.",
-    bestFor: "College fests, brand merch",
-    image: "/tshirts/hooded.jpg",
+    title: "Trendy & Timeless Designs",
+    text: "Polos, tees, hoodies and fleece, cuts that stay current without looking trendy for a week.",
   },
   {
-    title: "Raglan Sleeve",
-    fabric: "Cotton blend",
-    gsm: "180 GSM",
-    description:
-      "Contrast diagonal sleeves with a wider range of shoulder movement.",
-    bestFor: "Team kits, baseball styling",
-    image: "/tshirts/raglan.jpg",
+    title: "Perfect Fit & Comfort",
+    text: "Patterns graded for Indian sizing, with room to move through a full shift.",
   },
   {
-    title: "Drop Shoulder",
-    fabric: "Heavy cotton",
-    gsm: "220 GSM",
-    description:
-      "Relaxed oversized cut with a heavier fall, built for a modern look.",
-    bestFor: "Youth brands, campus merch",
-    image: "/tshirts/drop-shoulder.jpg",
+    title: "Affordable Bulk Pricing",
+    text: "Factory-direct rates for corporate, college and event quantities.",
   },
   {
-    title: "Sublimation Jersey",
-    fabric: "Polyester interlock",
-    gsm: "160 GSM",
-    description:
-      "Edge-to-edge printing with no cracking, since the ink dyes the fabric.",
-    bestFor: "Sports jerseys, all-over graphics",
-    image: "/tshirts/sublimation.jpg",
-  },
-  {
-    title: "Reflective Safety Tee",
-    fabric: "Polyester with reflective tape",
-    gsm: "160 GSM",
-    description:
-      "High-visibility base with stitched reflective tape for low-light sites.",
-    bestFor: "Site crews, warehouses, logistics",
-    image: "/tshirts/reflective.jpg",
-  },
-  {
-    title: "Kids & School Tee",
-    fabric: "Cotton PC",
-    gsm: "180 GSM",
-    description:
-      "Durable house-colour tees sized for children and built for rough use.",
-    bestFor: "School sports houses, annual days",
-    image: "/tshirts/kids.jpg",
+    title: "Customer First Approach",
+    text: "Sampling, colour matching and branding coordinated end to end from Baramati.",
   },
 ];
 
