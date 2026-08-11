@@ -7,6 +7,7 @@ import {
   FaLinkedinIn,
 } from "react-icons/fa";
 import CtaButton from "../ui/CtaButton";
+import { useDesktopMotion } from "../../hooks/useAnimations";
 
 const SOCIALS = [
   { icon: FaFacebookF, label: "Facebook", href: "#" },
@@ -100,6 +101,7 @@ function HeroSlideshow({ index, className = "" }) {
 export default function NewHero() {
   const ref = useRef(null);
   const [index, setIndex] = useState(0);
+  const desktopMotion = useDesktopMotion();
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start start", "end start"],
@@ -142,7 +144,7 @@ export default function NewHero() {
       <div className="relative z-10 flex min-h-0 flex-1 flex-col lg:flex-row">
         {/* Copy */}
         <motion.div
-          style={{ y: contentY }}
+          style={desktopMotion ? { y: contentY } : undefined}
           className="relative z-20 flex w-full flex-col justify-center px-5 pb-6 pt-[calc(var(--header-height)+1.5rem)] sm:px-8 sm:pb-8 lg:w-[58%] lg:max-w-2xl lg:pb-10 lg:pl-10 lg:pr-8 xl:w-[55%] xl:pl-14 xl:pr-10"
         >
           <motion.h1

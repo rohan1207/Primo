@@ -13,6 +13,11 @@ const GridMotion = ({ items = [], gradientColor = "#086dbe" }) => {
   const combinedItems = items.length > 0 ? items.slice(0, totalItems) : defaultItems;
 
   useEffect(() => {
+    // Parallax + mouse inertia feels glitchy on touch devices; keep a static grid.
+    const isDesktop = window.matchMedia("(min-width: 768px)").matches;
+    const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (!isDesktop || prefersReduced) return;
+
     gsap.ticker.lagSmoothing(0);
 
     const handleMouseMove = (e) => {
