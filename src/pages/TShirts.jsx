@@ -4,7 +4,53 @@ import CtaButton from "../components/ui/CtaButton";
 import CTABanner from "../components/ui/CTABanner";
 import ImageWithFallback from "../components/ui/ImageWithFallback";
 import QuoteCta from "../components/ui/QuoteCta";
-import { tshirtTypes, tshirtReasons, printMethods } from "../data/content";
+import { tshirtTypes, tshirtReasons, tshirtCatalogues, printMethods } from "../data/content";
+
+function CatalogueCard({ item, index }) {
+  return (
+    <motion.article
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.15 }}
+      transition={{ delay: (index % 4) * 0.05, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+      className="group flex h-full flex-col overflow-hidden rounded-2xl border border-mota-line bg-white shadow-soft transition-all duration-300 hover:-translate-y-1 hover:border-[#086dbe]/25 hover:shadow-float sm:rounded-[1.5rem]"
+      data-reveal
+    >
+      <div className="relative aspect-[4/5] overflow-hidden bg-mota-cream sm:aspect-[3/4]">
+        <ImageWithFallback
+          src={item.cover}
+          fallback="/tshirts/elegance.webp"
+          alt={`${item.name} catalogue`}
+          className="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-mota-blue/50 via-transparent to-transparent" />
+        <span className="absolute left-2.5 top-2.5 rounded-full bg-white/95 px-2 py-0.5 text-[9px] font-semibold uppercase tracking-[0.14em] text-mota-blue shadow-soft sm:left-3.5 sm:top-3.5 sm:px-2.5 sm:py-1 sm:text-[10px]">
+          {item.type}
+        </span>
+      </div>
+
+      <div className="flex flex-1 flex-col p-3 sm:p-4">
+        <p className="hidden min-h-[1.1rem] text-[10px] font-semibold uppercase tracking-[0.12em] text-[#086dbe] sm:block sm:text-[11px]">
+          {item.subtitle}
+        </p>
+        <h3 className="mt-0.5 font-sans text-[0.95rem] font-bold leading-snug tracking-[-0.02em] text-mota-ink sm:mt-1 sm:text-lg">
+          {item.name}
+        </h3>
+
+        <div className="mt-auto pt-2.5 sm:pt-3.5">
+          <CtaButton
+            href={encodeURI(item.file)}
+            download={item.downloadName}
+            variant="accent"
+          >
+            <span className="sm:hidden">Save</span>
+            <span className="hidden sm:inline">Download</span>
+          </CtaButton>
+        </div>
+      </div>
+    </motion.article>
+  );
+}
 
 function ColorSwatches({ colors, compact = false }) {
   return (
@@ -84,6 +130,46 @@ export default function TShirts() {
               />
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Catalogues */}
+      <section className="section-pad relative overflow-hidden bg-mota-cream !pt-8 sm:!pt-10">
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(8,109,190,0.08),transparent_55%)]" />
+
+        <div className="container-mota relative">
+          <div className="mx-auto max-w-2xl text-center">
+            <span className="mota-eyebrow-pill">Catalogues</span>
+            <h2 className="mota-title-section mt-4">
+              Browse &amp;{" "}
+              <span className="text-[#086dbe]">Download</span>
+            </h2>
+            <p className="mx-auto mt-4 max-w-lg text-[0.95rem] leading-relaxed text-mota-mist sm:text-base">
+              Full brand catalogues with styles, colours and specs. Save a copy and share it
+              with your team before you place an order.
+            </p>
+          </div>
+
+          <div className="mt-10 sm:mt-12">
+            <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:hidden">
+              {tshirtCatalogues.map((item, i) => (
+                <CatalogueCard key={item.file} item={item} index={i} />
+              ))}
+            </div>
+
+            <div className="hidden space-y-5 lg:block">
+              <div className="grid grid-cols-4 gap-5">
+                {tshirtCatalogues.slice(0, 4).map((item, i) => (
+                  <CatalogueCard key={item.file} item={item} index={i} />
+                ))}
+              </div>
+              <div className="mx-auto grid w-3/4 grid-cols-3 gap-5">
+                {tshirtCatalogues.slice(4).map((item, i) => (
+                  <CatalogueCard key={item.file} item={item} index={i + 4} />
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

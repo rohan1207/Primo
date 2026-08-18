@@ -559,6 +559,65 @@ export const tshirtTypes = [
   },
 ];
 
+export const tshirtCatalogues = [
+  {
+    name: "Trendz",
+    subtitle: "T-Shirt Catalogue",
+    file: "/TRENDZ_TTMCL_TShirt_Catalog.pdf",
+    downloadName: "Trendz-TShirt-Catalogue.pdf",
+    cover: "/tshirts/elegance.webp",
+    type: "PDF",
+  },
+  {
+    name: "Scott",
+    subtitle: "T-Shirt Catalogue",
+    file: "/SCOTT T-SHIRTS CATALOG.pdf",
+    downloadName: "Scott-TShirt-Catalogue.pdf",
+    cover: "/tshirts/classic.webp",
+    type: "PDF",
+  },
+  {
+    name: "Allen Solly",
+    subtitle: "TZ New Catalogue 2026",
+    file: "/Allensolly TShirt TZ New Catalogue 2026.pdf",
+    downloadName: "Allen-Solly-TZ-Catalogue-2026.pdf",
+    cover: "/tshirts/essential.webp",
+    type: "PDF",
+  },
+  {
+    name: "Allen Solly",
+    subtitle: "New Collection",
+    file: "/ALLEN SOLLY_NEW_1.pdf",
+    downloadName: "Allen-Solly-New-Collection.pdf",
+    cover: "/tshirts/prestige.jpg",
+    type: "PDF",
+  },
+  {
+    name: "Wild Horn",
+    subtitle: "T-Shirt Range",
+    file: "/wild_horn.jpeg",
+    downloadName: "Wild-Horn-Catalogue.jpeg",
+    cover: "/wild_horn.jpeg",
+    type: "Lookbook",
+  },
+  {
+    name: "Ruffty",
+    subtitle: "T-Shirt Range",
+    file: "/ruffty.jpeg",
+    downloadName: "Ruffty-Catalogue.jpeg",
+    cover: "/ruffty.jpeg",
+    type: "Lookbook",
+  },
+  {
+    name: "Carbon",
+    subtitle: "T-Shirt Range",
+    file: "/carbon.jpeg",
+    downloadName: "Carbon-Catalogue.jpeg",
+    cover: "/carbon.jpeg",
+    type: "Lookbook",
+  },
+];
+
 export const tshirtReasons = [
   {
     title: "Premium Quality Fabrics",

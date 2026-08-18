@@ -16,6 +16,7 @@ export default function CtaButton({
   fullWidth = false,
   showArrow = true,
   external = false,
+  download = false,
   /** Render as a plain span, for use inside an already-clickable parent */
   static: isStatic = false,
 }) {
@@ -80,6 +81,9 @@ export default function CtaButton({
         href={href}
         onClick={onClick}
         className={classes}
+        {...(download
+          ? { download: typeof download === "string" ? download : true }
+          : {})}
         {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
       >
         {content}
