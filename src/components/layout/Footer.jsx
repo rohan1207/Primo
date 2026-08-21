@@ -120,7 +120,7 @@ export default function Footer() {
             <h4 className={headingClass}>Reach Us</h4>
             <div className="mt-5 space-y-3">
               <a
-                href="tel:+919822421212"
+                href="tel:+919028552855"
                 className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.06] px-4 py-3.5 transition-all duration-300 hover:border-white/25 hover:bg-white/10"
               >
                 <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#086dbe] text-white">
@@ -131,12 +131,12 @@ export default function Footer() {
                     Call us
                   </span>
                   <span className="block text-[0.95rem] font-semibold text-white">
-                    +91 98224 21212
+                    +91 90285 52855
                   </span>
                 </span>
               </a>
               <a
-                href="mailto:info@motagroup.in"
+                href="mailto:contact@primoglobal.in"
                 className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.06] px-4 py-3.5 transition-all duration-300 hover:border-white/25 hover:bg-white/10"
               >
                 <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#086dbe] text-white">
@@ -147,7 +147,7 @@ export default function Footer() {
                     Email us
                   </span>
                   <span className="block break-all text-[0.95rem] font-semibold text-white">
-                    info@motagroup.in
+                    contact@primoglobal.in
                   </span>
                 </span>
               </a>

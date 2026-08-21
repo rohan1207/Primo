@@ -770,15 +770,15 @@ export const stats = [
 
 export const offices = {
   pune: {
-    title: "Pune Office",
+    title: "Corporate Office",
     company: "Mota Uniforms",
     address: [
-      "B-1003, Lakshmi Vilas, Mukund Nagar,",
-      "(Opp. Brand Factory)",
-      "Pune - 411037",
+      "23 & 24 Anusaya Enclave,",
+      "Jagtap Chowk, Wanowrie,",
+      "Pune - 411040",
     ],
-    tel: "+91 98224 21212",
-    email: "info@motagroup.in",
+    tel: "+91 90285 52855",
+    email: "contact@primoglobal.in",
   },
   plant: {
     title: "Manufacturing Plant",
@@ -787,8 +787,8 @@ export const offices = {
       "Plot No. D-4, M.I.D.C.,",
       "Baramati 413133 Dist. Pune (India)",
     ],
-    tel: "+91 2112 243 112 / 243 312",
-    email: "info@motagroup.in",
+    tel: "+91 90285 52855",
+    email: "contact@primoglobal.in",
   },
 };
 
@@ -822,7 +822,7 @@ export const fabricBrands = [
 ];
 
 export const aboutContent = {
-  intro: `Mota Uniforms is a one stop solution for all your Uniforms needs. "Mota Uniforms" is a brand of Mota Garments. We are one of the leading manufacturers and suppliers of all kinds of uniforms.`,
+  intro: `Primo Clothing Company, from the house of Mota Garments, delivers quality uniform solutions for schools and corporates.`,
   experience: `With an experience of over 25 years in this field, we are the preferred vendor for providing customised Uniforms to Schools, Colleges, Hospitals and nursing staff, Laboratories, Pharmaceutical companies, Aviation, Security staff, Hotels and housekeeping teams, Sports teams, Automobile workshops, Industry and Corporates.`,
   facility: `We have a self contained state-of-art manufacturing facility setup in Baramati, Pune (India). This facility has a capacity to produce over 800 garments per day. Our unit has high end automated sewing machines of brands like Brother and Juki. With strict in-line quality checks in place, we ensure quality consistency throughout the consignment.`,
   fabrics: `We at Mota Garments are authorised distributors and stockist of reputed fabric brands like Raymond, Mafatlal, Valji's, Siyaram's, Gwalior Mills, etc.`,

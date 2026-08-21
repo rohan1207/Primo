@@ -32,7 +32,7 @@ export default function Contact() {
               help with design, sampling and bulk delivery.
             </p>
             <div className="mt-7 flex flex-wrap items-center gap-2.5 sm:mt-8 sm:gap-3">
-              <CtaButton href="tel:+919822421212" variant="accent">
+              <CtaButton href="tel:+919028552855" variant="accent">
                 Call Us
               </CtaButton>
               <CtaButton to="/uniforms" variant="outline">
@@ -61,16 +61,16 @@ export default function Contact() {
                 Quick reach
               </p>
               <a
-                href="tel:+919822421212"
+                href="tel:+919028552855"
                 className="mt-1 block text-sm font-semibold text-mota-ink transition-colors hover:text-[#086dbe]"
               >
-                +91 98224 21212
+                +91 90285 52855
               </a>
               <a
-                href="mailto:info@motagroup.in"
+                href="mailto:contact@primoglobal.in"
                 className="mt-0.5 block text-sm text-mota-mist transition-colors hover:text-[#086dbe]"
               >
-                info@motagroup.in
+                contact@primoglobal.in
               </a>
             </div>
           </motion.div>
@@ -186,7 +186,7 @@ export default function Contact() {
         }
         description="Our team in Pune and Baramati is ready to help with design, sampling, and bulk delivery."
         primaryLabel="Call Us"
-        primaryTo="tel:+919822421212"
+        primaryTo="tel:+919028552855"
         secondaryLabel="View Uniforms"
         secondaryTo="/uniforms"
       />

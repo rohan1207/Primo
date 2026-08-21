@@ -25,18 +25,18 @@ export default function EnquirySection() {
               />
               <div className="mt-8 space-y-4">
                 <a
-                  href="tel:+919822421212"
+                  href="tel:+919028552855"
                   className="block rounded-2xl border border-mota-line bg-mota-cream/80 px-5 py-4 text-sm text-mota-mist transition-all duration-300 hover:border-[#086dbe]/35 hover:bg-white"
                 >
                   Call us at{" "}
-                  <span className="font-semibold text-[#086dbe]">+91 98224 21212</span>
+                  <span className="font-semibold text-[#086dbe]">+91 90285 52855</span>
                 </a>
                 <a
-                  href="mailto:info@motagroup.in"
+                  href="mailto:contact@primoglobal.in"
                   className="block rounded-2xl border border-mota-line bg-mota-cream/80 px-5 py-4 text-sm text-mota-mist transition-all duration-300 hover:border-[#086dbe]/35 hover:bg-white"
                 >
                   Email{" "}
-                  <span className="font-semibold text-[#086dbe]">info@motagroup.in</span>
+                  <span className="font-semibold text-[#086dbe]">contact@primoglobal.in</span>
                 </a>
               </div>
             </div>
