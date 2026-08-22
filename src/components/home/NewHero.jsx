@@ -141,17 +141,17 @@ export default function NewHero() {
         <SocialLinks vertical />
       </aside>
 
-      <div className="relative z-10 flex min-h-0 flex-1 flex-col lg:flex-row">
-        {/* Copy */}
+      <div className="relative z-10 flex min-h-0 flex-1 flex-col lg:flex-row lg:items-stretch lg:pt-[var(--header-height)] lg:pr-[4.5rem] xl:pr-[5.25rem]">
+        {/* Copy — stays in its own column so it cannot cover the photo */}
         <motion.div
           style={desktopMotion ? { y: contentY } : undefined}
-          className="relative z-20 flex w-full flex-col justify-center px-5 pb-6 pt-[calc(var(--header-height)+1.5rem)] sm:px-8 sm:pb-8 lg:w-[58%] lg:max-w-2xl lg:pb-10 lg:pl-10 lg:pr-8 xl:w-[55%] xl:pl-14 xl:pr-10"
+          className="relative z-20 flex w-full min-w-0 flex-col justify-center px-5 pb-6 pt-[calc(var(--header-height)+1.5rem)] sm:px-8 sm:pb-8 lg:w-[48%] lg:max-w-none lg:shrink-0 lg:px-8 lg:pb-10 lg:pt-8 xl:w-[46%] xl:pl-12 xl:pr-8"
         >
           <motion.h1
             initial={{ opacity: 0, y: 28 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
-            className="font-sans text-[clamp(2.25rem,5.2vw,3.9rem)] font-bold leading-[1.08] tracking-[-0.03em] text-mota-ink"
+            className="max-w-full break-words font-sans text-[clamp(2.1rem,5vw,3.35rem)] font-bold leading-[1.12] tracking-[-0.03em] text-mota-ink lg:text-[clamp(2rem,3.2vw,3.25rem)]"
           >
             Premium{" "}
             <span className="text-[#086dbe]">Uniforms</span>
@@ -204,14 +204,14 @@ export default function NewHero() {
           <HeroSlideshow index={index} />
         </motion.div>
 
-        {/* Desktop slideshow, narrower, flush to navy rail */}
+        {/* Desktop slideshow — remaining width only, never under the text */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.9, delay: 0.12 }}
-          className="absolute bottom-0 right-[4.5rem] top-[var(--header-height)] z-10 hidden w-[50vw] overflow-hidden rounded-l-[2rem] outline-none ring-0 xl:right-[5.25rem] lg:block"
+          className="relative hidden min-h-0 min-w-0 flex-1 overflow-hidden rounded-l-[2rem] lg:block"
         >
-          <HeroSlideshow index={index} />
+          <HeroSlideshow index={index} className="absolute inset-0" />
         </motion.div>
       </div>
 

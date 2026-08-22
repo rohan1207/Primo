@@ -853,7 +853,7 @@ export const offices = {
 export const clientLogos = [
   "/clients/asianpaints.jpeg",
   "/clients/bajaj.png",
-  "/clients/bekarat.jpeg",
+  "/clients/bekarat.png",
   "/clients/cargill.png",
   "/clients/cipla.png",
   "/clients/diageo.jpeg",
