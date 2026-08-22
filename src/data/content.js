@@ -52,6 +52,16 @@ export const domains = [
     cta: "Explore Corporate Gifting",
     ctaLabel: "Get a Quote",
     action: "quote",
+    downloads: [
+      {
+        file: "/Corporate Gifts Catalog 2026-2027.pdf",
+        downloadName: "Corporate-Gifts-Catalog-2026-2027.pdf",
+      },
+      {
+        file: "/Branded MRP Catalogue 2026 February.pdf",
+        downloadName: "Branded-MRP-Catalogue-2026.pdf",
+      },
+    ],
   },
 ];
 
@@ -616,6 +626,54 @@ export const tshirtCatalogues = [
     cover: "/carbon.jpeg",
     type: "Lookbook",
   },
+  {
+    name: "Skechers",
+    subtitle: "MRP Catalogue",
+    file: "/SKECHERS MRP.pdf",
+    downloadName: "Skechers-MRP-Catalogue.pdf",
+    cover: "/tshirts/comfort.webp",
+    type: "PDF",
+  },
+  {
+    name: "Benetton",
+    subtitle: "T-Shirt Catalogue",
+    file: "/Benetton.pdf",
+    downloadName: "Benetton-Catalogue.pdf",
+    cover: "/tshirts/elegance.webp",
+    type: "PDF",
+  },
+  {
+    name: "Adidas",
+    subtitle: "Catalogue 2025",
+    file: "/Adidas-Catalogue-25.pdf",
+    downloadName: "Adidas-Catalogue-2025.pdf",
+    cover: "/adidas.jpeg",
+    type: "PDF",
+  },
+  {
+    name: "Adidas",
+    subtitle: "DryFit Polo T-Shirts",
+    file: "/ADIDAS Polo T-shirts - DryFit.pdf",
+    downloadName: "Adidas-DryFit-Polo.pdf",
+    cover: "/adidas.jpeg",
+    type: "PDF",
+  },
+  {
+    name: "Adidas",
+    subtitle: "Polo Lookbook",
+    file: "/adidas.jpeg",
+    downloadName: "Adidas-Polo-Lookbook.jpeg",
+    cover: "/adidas.jpeg",
+    type: "Lookbook",
+  },
+  {
+    name: "Monte Carlo",
+    subtitle: "Polo Lookbook",
+    file: "/montecarlo.jpeg",
+    downloadName: "Monte-Carlo-Lookbook.jpeg",
+    cover: "/montecarlo.jpeg",
+    type: "Lookbook",
+  },
 ];
 
 export const tshirtReasons = [
@@ -791,6 +849,28 @@ export const offices = {
     email: "contact@primoglobal.in",
   },
 };
+
+export const clientLogos = [
+  "/clients/asianpaints.jpeg",
+  "/clients/bajaj.png",
+  "/clients/bekarat.jpeg",
+  "/clients/cargill.png",
+  "/clients/cipla.png",
+  "/clients/diageo.jpeg",
+  "/clients/emcure.png",
+  "/clients/kalyani.png",
+  "/clients/kalyani_logo.png",
+  "/clients/kinetic_green.png",
+  "/clients/magarpatta_logo.png",
+  "/clients/nanded_logo.png",
+  "/clients/orbis_logo.png",
+  "/clients/piaggio.png",
+  "/clients/png.jpeg",
+  "/clients/schreiber.jpeg",
+  "/clients/tata_motors.jpeg",
+  "/clients/tvs.png",
+  "/clients/uniliver.png",
+];
 
 export const topProducts = [
   "Corporate Uniforms",

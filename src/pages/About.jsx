@@ -88,9 +88,9 @@ const TESTIMONIALS = [
 
 const CLIENT_AVATARS = [
   "/clients/bajaj.png",
-  "/clients/honda.png",
+  "/clients/tata_motors.jpeg",
   "/clients/cipla.png",
-  "/clients/mahindra.png",
+  "/clients/tvs.png",
 ];
 
 function TestimonialCard({ item }) {

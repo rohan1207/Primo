@@ -158,16 +158,37 @@ export default function TShirts() {
             </div>
 
             <div className="hidden space-y-5 lg:block">
-              <div className="grid grid-cols-4 gap-5">
-                {tshirtCatalogues.slice(0, 4).map((item, i) => (
-                  <CatalogueCard key={item.file} item={item} index={i} />
-                ))}
-              </div>
-              <div className="mx-auto grid w-3/4 grid-cols-3 gap-5">
-                {tshirtCatalogues.slice(4).map((item, i) => (
-                  <CatalogueCard key={item.file} item={item} index={i + 4} />
-                ))}
-              </div>
+              {Array.from(
+                { length: Math.ceil(tshirtCatalogues.length / 4) },
+                (_, row) => tshirtCatalogues.slice(row * 4, row * 4 + 4)
+              ).map((row, rowIndex) => {
+                const cols = row.length;
+                const width =
+                  cols === 4 ? "w-full" : cols === 3 ? "w-3/4" : cols === 2 ? "w-1/2" : "w-1/4";
+
+                return (
+                  <div
+                    key={row.map((item) => item.file).join("-")}
+                    className={`mx-auto grid gap-5 ${width} ${
+                      cols === 4
+                        ? "grid-cols-4"
+                        : cols === 3
+                          ? "grid-cols-3"
+                          : cols === 2
+                            ? "grid-cols-2"
+                            : "grid-cols-1"
+                    }`}
+                  >
+                    {row.map((item, i) => (
+                      <CatalogueCard
+                        key={item.file}
+                        item={item}
+                        index={rowIndex * 4 + i}
+                      />
+                    ))}
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>

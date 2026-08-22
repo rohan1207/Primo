@@ -15,6 +15,19 @@ const icons = {
   gifting: HiOutlineGift,
 };
 
+function downloadFiles(files = []) {
+  files.forEach((item, i) => {
+    window.setTimeout(() => {
+      const link = document.createElement("a");
+      link.href = encodeURI(item.file);
+      link.download = item.downloadName || true;
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+    }, i * 250);
+  });
+}
+
 export default function DomainSplit() {
   const { openQuote } = useQuote();
 
@@ -42,7 +55,7 @@ export default function DomainSplit() {
         </motion.div>
       </div>
 
-      <div className="relative z-10 mx-auto grid w-full max-w-7xl grid-cols-1 gap-3 px-5 pb-10 sm:grid-cols-2 sm:gap-4 sm:px-8 sm:pb-12 lg:grid-cols-3 lg:gap-5 lg:pb-16">
+      <div className="relative z-10 mx-auto grid w-full max-w-7xl grid-cols-1 gap-3 px-5 pb-2 sm:grid-cols-2 sm:gap-4 sm:px-8 sm:pb-3 lg:grid-cols-3 lg:gap-5 lg:pb-4">
         {domains.map((domain, i) => {
           const DomainIcon = icons[domain.icon];
           const label = domain.ctaLabel || domain.cta.replace("Explore ", "");
@@ -87,12 +100,26 @@ export default function DomainSplit() {
                   {domain.description}
                 </p>
 
-                <CtaButton static variant="white" className="mt-4 sm:mt-5">
-                  <span className="inline-flex items-center gap-1.5">
-                    {label}
-                    {domain.external && <HiOutlineExternalLink className="h-3.5 w-3.5" />}
-                  </span>
-                </CtaButton>
+                <div className="relative z-30 mt-4 flex flex-wrap items-center gap-2 sm:mt-5">
+                  <CtaButton static variant="white">
+                    <span className="inline-flex items-center gap-1.5">
+                      {label}
+                      {domain.external && <HiOutlineExternalLink className="h-3.5 w-3.5" />}
+                    </span>
+                  </CtaButton>
+                  {domain.downloads?.length ? (
+                    <CtaButton
+                      type="button"
+                      variant="white"
+                      onClick={(event) => {
+                        event.stopPropagation();
+                        downloadFiles(domain.downloads);
+                      }}
+                    >
+                      Download
+                    </CtaButton>
+                  ) : null}
+                </div>
               </div>
 
               <div className="pointer-events-none absolute inset-0 rounded-[1.5rem] ring-1 ring-inset ring-white/10 transition-colors duration-500 group-hover:ring-white/25 lg:rounded-[1.75rem]" />

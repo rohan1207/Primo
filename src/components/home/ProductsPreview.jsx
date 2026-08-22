@@ -6,7 +6,7 @@ import CtaButton from "../ui/CtaButton";
 
 export default function ProductsPreview() {
   return (
-    <section className="section-pad relative overflow-hidden bg-mota-cream">
+    <section className="section-pad relative overflow-hidden bg-mota-cream !pt-8 sm:!pt-10 lg:!pt-12">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(8,109,190,0.08),transparent_55%)]" />
 
       <div className="container-mota relative">

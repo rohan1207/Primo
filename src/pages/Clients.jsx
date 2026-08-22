@@ -2,22 +2,7 @@ import { motion } from "framer-motion";
 import { useScrollReveal } from "../hooks/useAnimations";
 import CtaButton from "../components/ui/CtaButton";
 import CTABanner from "../components/ui/CTABanner";
-
-const CLIENT_LOGOS = [
-  "/clients/bajaj.png",
-  "/clients/bilt.png",
-  "/clients/cipla.png",
-  "/clients/honda.png",
-  "/clients/kalyani_logo.png",
-  "/clients/magarpatta_logo.png",
-  "/clients/mahindra.png",
-  "/clients/mukand.png",
-  "/clients/nanded_logo.png",
-  "/clients/orbis_logo.png",
-  "/clients/png.png",
-  "/clients/ub.png",
-  "/clients/uni.png",
-];
+import { clientLogos } from "../data/content";
 
 export default function Clients() {
   useScrollReveal();
@@ -59,7 +44,7 @@ export default function Clients() {
       <section className="section-pad relative overflow-hidden bg-mota-cream !pt-2 sm:!pt-4">
         <div className="container-mota relative">
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-4 lg:gap-5">
-            {CLIENT_LOGOS.map((logo, i) => (
+            {clientLogos.map((logo, i) => (
               <motion.div
                 key={logo}
                 initial={{ opacity: 0, scale: 0.94 }}

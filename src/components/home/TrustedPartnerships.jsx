@@ -1,23 +1,9 @@
 import OrbitImages from "../OrbitImages/OrbitImages";
 import LogoMark from "../svg/LogoMark";
 import CtaButton from "../ui/CtaButton";
+import { clientLogos } from "../../data/content";
 
-const CLIENT_LOGOS = [
-  "/clients/bajaj.png",
-  "/clients/bilt.png",
-  "/clients/cipla.png",
-  "/clients/honda.png",
-  "/clients/kalyani_logo.png",
-  "/clients/magarpatta_logo.png",
-  "/clients/mahindra.png",
-  "/clients/mukand.png",
-  "/clients/nanded_logo.png",
-  "/clients/orbis_logo.png",
-  "/clients/png.png",
-  "/clients/ub.png",
-  "/clients/uni.png",
-  "/tata.png",
-];
+const CLIENT_LOGOS = clientLogos.slice(0, 14);
 
 const INNER_RING = CLIENT_LOGOS.slice(0, 4);
 const MIDDLE_RING = CLIENT_LOGOS.slice(4, 8);
