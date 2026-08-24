@@ -3,11 +3,12 @@ import LogoMark from "../svg/LogoMark";
 import CtaButton from "../ui/CtaButton";
 import { clientLogos } from "../../data/content";
 
-const CLIENT_LOGOS = clientLogos.slice(0, 14);
-
-const INNER_RING = CLIENT_LOGOS.slice(0, 4);
-const MIDDLE_RING = CLIENT_LOGOS.slice(4, 8);
-const OUTER_RING = CLIENT_LOGOS.slice(8);
+const INNER_RING = clientLogos.slice(0, 4);
+const MIDDLE_RING = clientLogos.slice(4, 8);
+const OUTER_RING = [
+  "/clients/tata_motors.jpeg",
+  ...clientLogos.slice(9, 14),
+];
 
 function BrandCore() {
   return (
