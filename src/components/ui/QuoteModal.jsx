@@ -71,6 +71,8 @@ export default function QuoteModal({ open, onClose, subject }) {
               )}
 
               <EnquiryForm
+                source="quote"
+                subject={subject}
                 showMessage
                 className="mt-5 !rounded-[1.5rem] !border-mota-line !bg-white !p-5 !shadow-none sm:!p-6"
               />

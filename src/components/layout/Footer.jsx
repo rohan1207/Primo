@@ -171,7 +171,7 @@ export default function Footer() {
 
         <div className="flex flex-col items-center justify-between gap-3 text-center sm:flex-row sm:text-left">
           <p className="text-[13px] text-white/55">
-            Copyright &copy; 2026 Mota Uniforms | All rights reserved
+            Copyright &copy; 2026 PRIMO CLOTHING COMPANY | All rights reserved
           </p>
           <p className="text-[13px] text-white/55">
             Designed &amp; Developed by{" "}

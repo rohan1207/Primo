@@ -29,7 +29,7 @@ const STORY_DESKTOP = [
     id: "fabrics",
     title: "Fabric Partners",
     year: "Premium",
-    text: "Authorised distributors and stockists of Raymond, Mafatlal, Valji's, Siyaram's, Gwalior Mills and more, quality cloth behind every stitch.",
+    text: "Authorised distributors and stockists of Raymond, Mafatlal, Valji's, Siyaram's, Gwalior Mills, S.Kumar's, Adarsh, Qmax and more, quality cloth behind every stitch.",
     containerClass:
       "absolute right-[5%] top-[42%] z-20 flex w-[min(21rem,26%)] flex-col items-end gap-3",
     noteClass: "rotate-3 text-right font-display text-2xl font-semibold text-mota-blue lg:text-3xl",

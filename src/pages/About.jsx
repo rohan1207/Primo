@@ -32,8 +32,8 @@ const FEATURE_CARDS = [
   {
     icon: HiOutlineColorSwatch,
     title: "Premium Fabrics",
-    stat: "5+ Mills",
-    text: "Authorised stockist of Raymond, Mafatlal, Siyaram's and more.",
+    stat: "8+ Mills",
+    text: "Authorised stockist of Raymond, Mafatlal, Siyaram's, S.Kumar's and more.",
   },
   {
     icon: HiOutlineUsers,
@@ -88,7 +88,7 @@ const TESTIMONIALS = [
 
 const CLIENT_AVATARS = [
   "/clients/bajaj.png",
-  "/clients/tata_motors.jpeg",
+  "/clients/tata_motors.png",
   "/clients/cipla.png",
   "/clients/tvs.png",
 ];
@@ -373,7 +373,11 @@ export default function About() {
               viewport={{ once: true }}
               transition={{ duration: 0.65 }}
             >
-              <EnquiryForm showMessage className="!rounded-[1.75rem] shadow-float sm:!rounded-[2rem]" />
+              <EnquiryForm
+                source="about"
+                showMessage
+                className="!rounded-[1.75rem] shadow-float sm:!rounded-[2rem]"
+              />
             </motion.div>
           </div>
         </div>

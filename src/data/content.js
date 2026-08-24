@@ -829,7 +829,7 @@ export const stats = [
 export const offices = {
   pune: {
     title: "Corporate Office",
-    company: "Mota Uniforms",
+    company: "Primo Clothing Company",
     address: [
       "23 & 24 Anusaya Enclave,",
       "Jagtap Chowk, Wanowrie,",
@@ -840,7 +840,7 @@ export const offices = {
   },
   plant: {
     title: "Manufacturing Plant",
-    company: "Mota Garments",
+    company: "Primo Clothing Company",
     address: [
       "Plot No. D-4, M.I.D.C.,",
       "Baramati 413133 Dist. Pune (India)",
@@ -867,7 +867,7 @@ export const clientLogos = [
   "/clients/piaggio.png",
   "/clients/png.jpeg",
   "/clients/schreiber.jpeg",
-  "/clients/tata_motors.jpeg",
+  "/clients/tata_motors.png",
   "/clients/tvs.png",
   "/clients/uniliver.png",
 ];
@@ -899,13 +899,16 @@ export const fabricBrands = [
   "Valji's",
   "Siyaram's",
   "Gwalior Mills",
+  "S.Kumar's",
+  "Adarsh",
+  "Qmax",
 ];
 
 export const aboutContent = {
   intro: `Primo Clothing Company, from the house of Mota Garments, delivers quality uniform solutions for schools and corporates.`,
   experience: `With an experience of over 25 years in this field, we are the preferred vendor for providing customised Uniforms to Schools, Colleges, Hospitals and nursing staff, Laboratories, Pharmaceutical companies, Aviation, Security staff, Hotels and housekeeping teams, Sports teams, Automobile workshops, Industry and Corporates.`,
   facility: `We have a self contained state-of-art manufacturing facility setup in Baramati, Pune (India). This facility has a capacity to produce over 800 garments per day. Our unit has high end automated sewing machines of brands like Brother and Juki. With strict in-line quality checks in place, we ensure quality consistency throughout the consignment.`,
-  fabrics: `We at Mota Garments are authorised distributors and stockist of reputed fabric brands like Raymond, Mafatlal, Valji's, Siyaram's, Gwalior Mills, etc.`,
+  fabrics: `We at Mota Garments are authorised distributors and stockist of reputed fabric brands like Raymond, Mafatlal, Valji's, Siyaram's, Gwalior Mills, S.Kumar's, Adarsh, Qmax, etc.`,
   position: `Our association with different fabric manufacturers complimented with our own state-of-art manufacturing setup; We are in an excellent position to provide our clients all types of uniforms with superb quality in the given time frame.`,
 };
 

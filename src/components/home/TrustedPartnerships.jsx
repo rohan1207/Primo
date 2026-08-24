@@ -6,7 +6,7 @@ import { clientLogos } from "../../data/content";
 const INNER_RING = clientLogos.slice(0, 4);
 const MIDDLE_RING = clientLogos.slice(4, 8);
 const OUTER_RING = [
-  "/clients/tata_motors.jpeg",
+  "/clients/tata_motors.png",
   ...clientLogos.slice(9, 14),
 ];
 

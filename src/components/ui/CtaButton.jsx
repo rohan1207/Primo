@@ -17,6 +17,7 @@ export default function CtaButton({
   showArrow = true,
   external = false,
   download = false,
+  disabled = false,
   /** Render as a plain span, for use inside an already-clickable parent */
   static: isStatic = false,
 }) {
@@ -69,7 +70,12 @@ export default function CtaButton({
 
   if (type === "submit" || type === "button") {
     return (
-      <button type={type} onClick={onClick} className={classes}>
+      <button
+        type={type}
+        onClick={onClick}
+        className={`${classes}${disabled ? " pointer-events-none opacity-60" : ""}`}
+        disabled={disabled}
+      >
         {content}
       </button>
     );

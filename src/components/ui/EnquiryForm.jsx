@@ -2,14 +2,38 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { HiCheck } from "react-icons/hi";
 import CtaButton from "./CtaButton";
+import { submitEnquiry } from "../../lib/submitEnquiry";
 
-export default function EnquiryForm({ variant = "light", className = "", showMessage = false }) {
+export default function EnquiryForm({
+  className = "",
+  showMessage = false,
+  source = "contact",
+  subject = "",
+}) {
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState("");
   const [form, setForm] = useState({ name: "", phone: "", email: "", message: "" });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
+    setError("");
+    setSending(true);
+    try {
+      await submitEnquiry({
+        source,
+        subject,
+        name: form.name,
+        phone: form.phone,
+        email: form.email,
+        message: form.message,
+      });
+      setSubmitted(true);
+    } catch (err) {
+      setError("Could not send just now. Please call +91 90285 52855 or try again.");
+    } finally {
+      setSending(false);
+    }
   };
 
   const inputClass =
@@ -93,9 +117,18 @@ export default function EnquiryForm({ variant = "light", className = "", showMes
             />
           </div>
         )}
+        {error ? (
+          <p className="sm:col-span-2 text-sm text-red-600">{error}</p>
+        ) : null}
         <div className="sm:col-span-2">
-          <CtaButton type="submit" variant="accent" fullWidth className="sm:!w-auto">
-            Submit Enquiry
+          <CtaButton
+            type="submit"
+            variant="accent"
+            fullWidth
+            disabled={sending}
+            className="sm:!w-auto"
+          >
+            {sending ? "Sending..." : "Submit Enquiry"}
           </CtaButton>
         </div>
       </div>
