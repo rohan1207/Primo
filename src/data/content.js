@@ -829,7 +829,7 @@ export const stats = [
 export const offices = {
   pune: {
     title: "Corporate Office",
-    company: "Primo Clothing Company",
+    company: "PRIMO CLOTHING COMPANY",
     address: [
       "23 & 24 Anusaya Enclave,",
       "Jagtap Chowk, Wanowrie,",

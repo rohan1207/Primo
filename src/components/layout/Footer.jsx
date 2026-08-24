@@ -26,12 +26,10 @@ const linkClass =
 function OfficeCard({ office }) {
   return (
     <div className="rounded-2xl border border-white/10 bg-white/[0.06] p-5 backdrop-blur-sm transition-colors duration-300 hover:border-white/20 sm:p-6">
-      <div className="flex items-baseline justify-between gap-3">
-        <p className="text-base font-semibold text-white">{office.title}</p>
-        <span className="shrink-0 text-[11px] font-medium uppercase tracking-[0.12em] text-white/45">
-          {office.company}
-        </span>
-      </div>
+      <p className="text-base font-semibold text-white">{office.title}</p>
+      <p className="mt-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-white/70">
+        {office.company}
+      </p>
 
       <div className="mt-4 space-y-2.5">
         <p className="flex items-start gap-2.5 text-sm leading-relaxed text-white/70">
