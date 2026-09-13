@@ -121,15 +121,14 @@ export default function Contact() {
                       <div className="mt-3 h-0.5 w-10 rounded-full bg-[#086dbe]" />
 
                       <div className="mt-5 space-y-3">
-                        {office.address.map((line) => (
-                          <p
-                            key={line}
-                            className="flex items-start gap-3 text-sm text-mota-mist"
-                          >
-                            <HiOutlineLocationMarker className="mt-0.5 shrink-0 text-[#086dbe]" />
-                            {line}
-                          </p>
-                        ))}
+                        <div className="flex items-start gap-3 text-sm text-mota-mist">
+                          <HiOutlineLocationMarker className="mt-0.5 shrink-0 text-[#086dbe]" />
+                          <div className="space-y-0.5 leading-relaxed">
+                            {office.address.map((line) => (
+                              <p key={line}>{line}</p>
+                            ))}
+                          </div>
+                        </div>
                         <a
                           href={`tel:${office.tel.replace(/\s/g, "").split("/")[0]}`}
                           className="flex items-center gap-3 text-sm text-mota-mist transition-colors hover:text-[#086dbe]"

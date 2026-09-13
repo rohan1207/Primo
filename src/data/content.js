@@ -833,7 +833,7 @@ export const offices = {
     address: [
       "23 & 24 Anusaya Enclave,",
       "Jagtap Chowk, Wanowrie,",
-      "Pune - 411040",
+      "Pune 411040",
     ],
     tel: "+91 90285 52855",
     email: "contact@primoglobal.in",
